@@ -1,8 +1,5 @@
-
-// Fix: Use namespace import to bypass named export resolution issues in certain environments
 import React, { useState, useEffect } from 'react';
-import * as ReactRouterDOM from 'react-router-dom';
-const { Link, useLocation } = ReactRouterDOM;
+import { Link, useLocation } from 'react-router-dom';
 import { 
   COMPANY_NAME, 
   BRAND_NAME, 

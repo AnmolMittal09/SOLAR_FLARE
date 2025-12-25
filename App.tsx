@@ -1,9 +1,5 @@
-
-// Fix: Use namespace import to bypass named export resolution issues in certain environments
 import React from 'react';
-import * as ReactRouterDOM from 'react-router-dom';
-const { HashRouter, Routes, Route } = ReactRouterDOM;
-const Router = HashRouter;
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
