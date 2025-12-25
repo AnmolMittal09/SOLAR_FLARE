@@ -1,5 +1,8 @@
+
+// Fix: Use namespace import to bypass named export resolution issues in certain environments
 import React, { useState, useEffect, useRef, useMemo, memo } from 'react';
-import { Link } from 'react-router-dom';
+import * as ReactRouterDOM from 'react-router-dom';
+const { Link } = ReactRouterDOM;
 import { SERVICES, TESTIMONIALS, ICONS, PHONE_PRIMARY, BRAND_NAME, TAGLINE } from '../constants';
 import { Service } from '../types';
 
@@ -17,6 +20,7 @@ const Hero = () => {
       if (requestRef.current) cancelAnimationFrame(requestRef.current);
       
       requestRef.current = requestAnimationFrame(() => {
+        // Calculate relative mouse position (-1 to 1)
         const x = (e.clientX / window.innerWidth - 0.5) * 2;
         const y = (e.clientY / window.innerHeight - 0.5) * 2;
         setMousePos({ x, y });
@@ -33,14 +37,16 @@ const Hero = () => {
     };
   }, []);
 
-  const parallaxY = scrollY * 0.25;
-  const rotX = mousePos.y * -6;
+  // Parallax and Tilt constants
+  const parallaxY = scrollY * 0.25; // Subtle scroll parallax
+  const rotX = mousePos.y * -6; // Soft tilt range
   const rotY = mousePos.x * 6;
   const shadowX = mousePos.x * 30;
   const shadowY = mousePos.y * 30;
 
   return (
     <section className="relative min-h-screen lg:min-h-[110vh] flex items-center overflow-hidden bg-slate-950 perspective-2000">
+      {/* 3D Background Layer */}
       <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0 transition-transform duration-1000 ease-out scale-110 will-change-transform"
@@ -56,9 +62,13 @@ const Hero = () => {
             decoding="async"
           />
         </div>
+        
+        {/* Refined Overlays for High Contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/95 via-slate-950/40 to-slate-950"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/20 to-transparent"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(22,163,74,0.15)_0%,transparent_70%)]"></div>
+        
+        {/* Sunlight spot that follows mouse subtly */}
         <div 
           className="absolute inset-0 opacity-20 pointer-events-none transition-opacity duration-1000"
           style={{
@@ -69,6 +79,8 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-24 lg:pt-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Main Content Area with Enhanced 3D Interaction */}
           <div 
             className="lg:col-span-8 preserve-3d transition-transform duration-700 ease-out will-change-transform"
             style={{ 
@@ -122,6 +134,7 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* Floating Data Dashboard with Internal Depth */}
           <div className="hidden lg:block lg:col-span-4 perspective-2000 pt-10">
             <div 
               className="glass p-12 rounded-[4rem] shadow-[0_80px_150px_rgba(0,0,0,0.6)] border border-white/20 transition-transform duration-1000 ease-out group overflow-hidden will-change-transform preserve-3d"
@@ -129,6 +142,7 @@ const Hero = () => {
                 transform: `rotateX(${rotX * 1.5}deg) rotateY(${rotY * 1.5}deg) translateZ(50px)`,
               }}
             >
+              {/* Internal Parallax Element */}
               <div 
                 className="absolute -top-10 -right-10 w-40 h-40 bg-green-500/20 blur-3xl rounded-full transition-transform duration-700"
                 style={{ transform: `translateZ(-20px) translateX(${mousePos.x * -20}px) translateY(${mousePos.y * -20}px)` }}
@@ -164,6 +178,7 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Dynamic Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40 animate-in fade-in duration-1000 delay-1000">
         <span className="text-white text-[9px] font-black uppercase tracking-[0.6em]">Discover</span>
         <div className="w-[2px] h-16 bg-gradient-to-b from-green-500 to-transparent"></div>
@@ -172,8 +187,10 @@ const Hero = () => {
   );
 };
 
+// Memoized ServiceCard with Image
 const ServiceCard = memo(({ s }: { s: Service }) => (
   <div className="group relative bg-white rounded-[2.5rem] lg:rounded-[3.5rem] shadow-2xl shadow-slate-200/50 hover-3d transition-all duration-700 border border-slate-100 flex flex-col h-full perspective-1000 overflow-hidden">
+    {/* Image Header */}
     <div className="relative h-64 lg:h-72 overflow-hidden">
       <img 
         src={s.imageUrl} 
@@ -188,6 +205,7 @@ const ServiceCard = memo(({ s }: { s: Service }) => (
       </div>
     </div>
 
+    {/* Content Section */}
     <div className="p-10 lg:p-14 pt-4 lg:pt-6 flex flex-col grow">
       <h3 className="text-3xl lg:text-4xl font-black mb-6 lg:mb-8 tracking-tighter text-slate-900 leading-none">{s.title}</h3>
       <p className="text-slate-500 mb-10 lg:mb-16 font-medium leading-relaxed grow text-lg lg:text-xl">{s.description}</p>
@@ -237,10 +255,12 @@ const StepCard: React.FC<{ step: any; index: number }> = ({ step, index }) => {
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
+      {/* Background Index Number */}
       <div className="absolute -top-8 -left-4 text-9xl lg:text-[12rem] font-black text-slate-50 leading-none -z-10 transition-colors group-hover:text-green-50/70 select-none">
         0{index + 1}
       </div>
 
+      {/* Step Image with Hover Effect */}
       <div className="relative mb-10 overflow-hidden rounded-[2.5rem] shadow-xl aspect-[4/3] group-hover:shadow-2xl transition-all duration-500">
         <img 
           src={step.img} 
@@ -254,6 +274,7 @@ const StepCard: React.FC<{ step: any; index: number }> = ({ step, index }) => {
         </div>
       </div>
 
+      {/* Step Text */}
       <div className="px-2">
         <h4 className="text-2xl lg:text-3xl font-black mb-4 lg:mb-6 text-slate-900 tracking-tight flex items-center gap-3">
           <span className="w-1 h-8 bg-green-500 rounded-full"></span>
@@ -297,6 +318,7 @@ const InstallationProcess = memo(() => {
 
   return (
     <section className="py-24 lg:py-44 relative overflow-hidden bg-white">
+      {/* Decorative background element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
       
       <div className="container mx-auto px-4">
@@ -323,6 +345,8 @@ const Home: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-1000">
       <Hero />
+      
+      {/* Services Overview */}
       <section className="py-24 lg:py-44 relative bg-slate-50/50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mb-24 lg:mb-40 text-center lg:text-left">
@@ -342,7 +366,10 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
       <InstallationProcess />
+
+      {/* Why Choose Us */}
       <section className="py-24 lg:py-44 bg-slate-950 text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -390,6 +417,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
       <section className="py-24 lg:py-44 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-24 lg:mb-40">
@@ -420,6 +449,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Final CTA */}
       <section className="py-24 lg:py-44 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="bg-slate-950 rounded-[4rem] lg:rounded-[6rem] p-12 lg:p-40 text-white text-center relative overflow-hidden shadow-[0_120px_200px_-50px_rgba(0,0,0,0.8)] border border-white/5">
