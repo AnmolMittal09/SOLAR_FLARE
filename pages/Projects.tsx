@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
-import { PROJECTS } from '../constants';
+import * as ReactRouterDOM from 'react-router-dom';
+const { Link } = ReactRouterDOM;
+import { PROJECTS } from '../constants.tsx';
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('All');
@@ -89,9 +91,12 @@ const Projects: React.FC = () => {
           <div className="absolute top-0 left-0 w-32 h-32 bg-green-500/5 blur-3xl rounded-full"></div>
           <h2 className="text-3xl font-black mb-4 tracking-tight">Want to verify our quality?</h2>
           <p className="text-slate-500 font-medium mb-10 max-w-xl mx-auto leading-relaxed">We can arrange site visits to our operational plants in Gurugram, Basai, or Manesar. See the engineering for yourself.</p>
-          <button className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-black hover:bg-green-600 transition-all shadow-xl active:scale-95">
+          <Link 
+            to="/contact" 
+            className="inline-block bg-slate-900 text-white px-10 py-4 rounded-2xl font-black hover:bg-green-600 transition-all shadow-xl active:scale-95"
+          >
             Request Site Audit
-          </button>
+          </Link>
         </div>
       </div>
     </div>
