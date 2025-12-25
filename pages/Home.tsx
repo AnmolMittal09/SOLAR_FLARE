@@ -4,6 +4,7 @@ import * as ReactRouterDOM from 'react-router-dom';
 const { Link } = ReactRouterDOM;
 import { SERVICES, TESTIMONIALS, ICONS, PHONE_PRIMARY, BRAND_NAME, TAGLINE, WHATSAPP_LINK } from '../constants.tsx';
 import { Service } from '../types.ts';
+import { SEO } from '../components/SEO';
 
 const Hero = () => {
   const [scrollY, setScrollY] = React.useState(0);
@@ -52,7 +53,7 @@ const Hero = () => {
         >
           <img
             src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=90&w=1920"
-            alt="Large Premium Solar Panel Installation"
+            alt="Premium Tier-1 Solar Panel Installation by DRG Power in Haryana"
             className="w-full h-full object-cover opacity-60"
             loading="eager"
             fetchPriority="high"
@@ -96,7 +97,7 @@ const Hero = () => {
             className="text-lg md:text-3xl text-slate-100 mb-16 leading-relaxed max-w-3xl mx-auto font-medium animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-200 will-change-transform"
             style={{ transform: `translateZ(80px)` }}
           >
-            {TAGLINE} "Looking for Backup? We have the solution for you." Tier-1 solar panels for a greener Haryana.
+            {TAGLINE} Haryana's most trusted solar energy partner for residential and commercial rooftop solutions.
           </p>
 
           <div 
@@ -231,7 +232,7 @@ const ServiceCard = React.memo(({ s }: { s: Service }) => (
     <div className="relative h-64 lg:h-72 overflow-hidden">
       <img 
         src={s.imageUrl} 
-        alt={s.title} 
+        alt={`Solar panel solutions for ${s.title}`} 
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
         loading="lazy"
         width="600"
@@ -361,7 +362,6 @@ const InstallationProcess = React.memo(() => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative">
-          {/* Vertical connecting line for desktop */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-slate-100 to-transparent -translate-x-1/2"></div>
           
           {steps.map((step, i) => (
@@ -376,6 +376,11 @@ const InstallationProcess = React.memo(() => {
 const Home: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-1000">
+      <SEO 
+        title="Home" 
+        description="DRG Power Technology is Haryana's leading solar energy provider. Get professional rooftop solar installations for homes, complexes, and industries in Gurugram and surrounding regions." 
+      />
+      
       <Hero />
       
       <QuickInquirySection />

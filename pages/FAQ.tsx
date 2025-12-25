@@ -1,16 +1,21 @@
 
 import React, { useState } from 'react';
 import { FAQS, EMAIL_ADDRESS, WHATSAPP_LINK } from '../constants';
+import { SEO } from '../components/SEO';
 
 const FAQ: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <div className="pt-40 lg:pt-48 pb-24">
+      <SEO 
+        title="FAQ" 
+        description="Frequently asked questions about solar energy in Haryana. Information on solar panel warranty, government subsidies, net-metering with DHBVN/UHBVN, and ROI."
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 italic">COMMON <span className="text-gradient">QUESTIONS.</span></h1>
-          <p className="text-lg text-slate-600 font-medium">Everything you need to know about switching to solar energy.</p>
+          <p className="text-lg text-slate-600 font-medium">Everything you need to know about switching to solar energy in Haryana.</p>
         </div>
 
         <div className="space-y-4" role="list">

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { PHONE_PRIMARY, PHONE_SECONDARY, EMAIL_ADDRESS, ADDRESS, ICONS, BRAND_NAME } from '../constants';
+import { SEO } from '../components/SEO';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', city: '', requirement: 'Residential', message: '' });
@@ -11,10 +12,8 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // WhatsApp lead gen format
     const message = `Hello, I am interested in solar panel installation.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nCity: ${formData.city}\nRequirement: ${formData.requirement}\nMessage: ${formData.message}`;
     
-    // Simulate API delay then redirect
     setTimeout(() => {
       setIsSubmitting(false);
       setShowSuccess(true);
@@ -27,9 +26,12 @@ const Contact: React.FC = () => {
 
   return (
     <div className="pt-32 lg:pt-48 pb-24 bg-white selection:bg-green-100">
+      <SEO 
+        title="Contact Us" 
+        description="Get a free solar audit in Haryana. Contact DRG Power Technology for residential, commercial, and industrial solar inquiries. Visit our regional HQ in Gurugram."
+      />
       <div className="container mx-auto px-4 md:px-6">
         
-        {/* Header Section */}
         <div className="max-w-4xl mb-16 lg:mb-24">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 mb-6">
             <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -45,10 +47,8 @@ const Contact: React.FC = () => {
 
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
-          {/* Left Column: Info & Map */}
           <div className="lg:col-span-5 space-y-12">
             
-            {/* Contact Cards Grid */}
             <div className="grid gap-6">
               <a href={`tel:${PHONE_PRIMARY}`} className="group p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 flex items-start gap-6">
                 <div className="w-14 h-14 bg-white text-green-700 rounded-2xl flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
@@ -81,16 +81,13 @@ const Contact: React.FC = () => {
                   <div>
                     <p className="text-[10px] font-black uppercase tracking-widest text-white/40 mb-1">Regional HQ</p>
                     <address className="text-lg font-bold leading-snug not-italic">
-                      Khasra No. 246, Basai,<br />
-                      Main Ghari Road, Gurugram,<br />
-                      Haryana – 122006
+                      {ADDRESS}
                     </address>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Live Map Embed with Pin Marker */}
             <div className="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-slate-50 aspect-video lg:aspect-square relative group bg-slate-200">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.828551733224!2d76.97556107528216!3d28.45465717576288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzE2LjgiTiA3Niw1OCc0MS4zIkU!5e0!3m2!1sen!2sin!4v1715870000000!5m2!1sen!2sin" 
@@ -100,11 +97,10 @@ const Contact: React.FC = () => {
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="DRG Power Technology Location Map"
+                title="DRG Power Technology Location Map in Gurugram"
                 className="grayscale-[0.3] contrast-[1.1] group-hover:grayscale-0 transition-all duration-700"
               ></iframe>
               
-              {/* Overlay Label */}
               <div className="absolute bottom-6 left-6 right-6 glass p-4 rounded-2xl border border-white/20 flex items-center justify-between">
                 <div>
                   <p className="text-xs font-black uppercase text-slate-900 flex items-center gap-2">
@@ -125,7 +121,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Form */}
           <div className="lg:col-span-7">
             <div className="bg-white p-10 lg:p-16 rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] border border-slate-100 sticky top-32">
               <div className="mb-12">
@@ -153,7 +148,7 @@ const Contact: React.FC = () => {
                         required
                         type="text"
                         className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all font-bold text-slate-900"
-                        placeholder="John Doe"
+                        placeholder="Your Name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                       />
@@ -165,7 +160,7 @@ const Contact: React.FC = () => {
                         required
                         type="tel"
                         className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all font-bold text-slate-900"
-                        placeholder="+91 00000 00000"
+                        placeholder="+91"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       />
@@ -212,7 +207,7 @@ const Contact: React.FC = () => {
                       id="message"
                       rows={4}
                       className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all font-bold text-slate-900 resize-none"
-                      placeholder="e.g. 'I have a 1000 sq ft rooftop' or 'Monthly bill is approx ₹5,000'"
+                      placeholder="e.g. Roof size, monthly electricity bill, etc."
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                     ></textarea>
@@ -251,21 +246,20 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Trust Section */}
         <div className="mt-32 pt-20 border-t border-slate-100">
           <div className="grid md:grid-cols-3 gap-12 lg:gap-20">
-            <div>
+            <section>
               <p className="text-3xl font-black text-slate-950 mb-4 tracking-tight leading-none italic uppercase">HARYANA <br /><span className="text-green-600">CERTIFIED.</span></p>
               <p className="text-slate-500 font-medium leading-relaxed">DRG Power is an empaneled EPC provider with full DHBVN/UHBVN compliance across the state.</p>
-            </div>
-            <div>
+            </section>
+            <section>
               <p className="text-3xl font-black text-slate-950 mb-4 tracking-tight leading-none italic uppercase">TECHNICAL <br /><span className="text-green-600">AUDITS.</span></p>
               <p className="text-slate-500 font-medium leading-relaxed">Our solar audits include 3D shadow mapping and structural integrity certification as standard.</p>
-            </div>
-            <div>
+            </section>
+            <section>
               <p className="text-3xl font-black text-slate-950 mb-4 tracking-tight leading-none italic uppercase">LIFETIME <br /><span className="text-green-600">SUPPORT.</span></p>
               <p className="text-slate-500 font-medium leading-relaxed">We provide 24/7 monitoring systems and local maintenance teams based in Gurugram and Rohtak.</p>
-            </div>
+            </section>
           </div>
         </div>
       </div>

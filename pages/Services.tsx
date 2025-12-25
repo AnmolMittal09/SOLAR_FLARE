@@ -1,9 +1,9 @@
 
-// Fix: Use namespace import to bypass named export resolution issues in certain environments
 import React, { useState, useEffect } from 'react';
 import * as ReactRouterDOM from 'react-router-dom';
 const { Link } = ReactRouterDOM;
 import { SERVICES, ICONS } from '../constants';
+import { SEO } from '../components/SEO';
 
 const ServicesHero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -16,7 +16,6 @@ const ServicesHero = () => {
 
   return (
     <section className="relative h-[70vh] lg:h-[80vh] flex items-center overflow-hidden bg-slate-950 perspective-2000">
-      {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0 transition-transform duration-300 ease-out scale-110"
@@ -24,10 +23,9 @@ const ServicesHero = () => {
         >
           <img
             src="https://images.unsplash.com/photo-1611365892117-00ac5ef4365c?auto=format&fit=crop&q=90&w=1920"
-            alt="Close up of Solar Panels"
+            alt="Advanced Solar Photovoltaic Systems Engineered by DRG Power"
             className="w-full h-full object-cover opacity-50 grayscale-[10%]"
             loading="eager"
-            // Fix: Changed fetchpriority to fetchPriority to match React type expectations
             fetchPriority="high"
             width="1920"
             height="1080"
@@ -62,7 +60,6 @@ const ServicesHero = () => {
         </div>
       </div>
 
-      {/* Decorative floating card */}
       <div className="absolute bottom-12 right-12 hidden lg:block animate-float">
         <div className="glass p-6 rounded-3xl border border-white/20 shadow-2xl">
           <div className="flex items-center gap-4">
@@ -83,13 +80,17 @@ const ServicesHero = () => {
 const Services: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-1000">
+      <SEO 
+        title="Services" 
+        description="Comprehensive solar solutions including residential rooftop, housing complex systems, and commercial industrial solar plants in Haryana. Tier-1 modules and smart grid integration."
+      />
       <ServicesHero />
       
       <div className="py-24 lg:py-40 bg-white">
         <div className="container mx-auto px-4">
           <div className="space-y-32">
             {SERVICES.map((s, idx) => (
-              <div key={s.id} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+              <section key={s.id} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="lg:w-1/2">
                   <div className="bg-green-50 text-green-600 w-20 h-20 rounded-[2rem] flex items-center justify-center mb-10 shadow-inner">
                     {s.icon}
@@ -118,7 +119,7 @@ const Services: React.FC = () => {
                   <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
                     <img 
                       src={s.imageUrl} 
-                      alt={s.title} 
+                      alt={`Premium solar energy installation for ${s.title}`} 
                       className="w-full h-[400px] lg:h-[600px] object-cover group-hover:scale-110 transition-transform duration-1000 grayscale-[0.2] group-hover:grayscale-0" 
                       loading="lazy"
                       width="800"
@@ -128,11 +129,10 @@ const Services: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
                 </div>
-              </div>
+              </section>
             ))}
           </div>
 
-          {/* Extra Services Grid */}
           <div className="mt-40">
             <div className="text-center mb-20">
               <h2 className="text-4xl lg:text-7xl font-black tracking-tighter italic uppercase">BEYOND <span className="text-gradient">INSTALLATION.</span></h2>
@@ -157,11 +157,11 @@ const Services: React.FC = () => {
                   icon: "🔄"
                 }
               ].map((service, i) => (
-                <div key={i} className="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500 group">
+                <section key={i} className="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500 group">
                   <div className="text-5xl mb-8 group-hover:scale-110 transition-transform origin-left">{service.icon}</div>
                   <h3 className="text-2xl font-black mb-4 tracking-tight text-slate-900">{service.title}</h3>
                   <p className="text-slate-500 font-medium leading-relaxed">{service.desc}</p>
-                </div>
+                </section>
               ))}
             </div>
           </div>

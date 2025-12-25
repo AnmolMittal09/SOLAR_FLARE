@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import * as ReactRouterDOM from 'react-router-dom';
 const { Link } = ReactRouterDOM;
 import { PROJECTS } from '../constants.tsx';
+import { SEO } from '../components/SEO';
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('All');
@@ -23,13 +24,16 @@ const Projects: React.FC = () => {
 
   return (
     <div className="pt-40 lg:pt-48 pb-24 bg-slate-50/50 min-h-screen">
+      <SEO 
+        title="Our Projects" 
+        description="Explore DRG Power's solar installation portfolio across Haryana, including major society projects in Gurugram, industrial plants in Manesar, and luxury home solar systems."
+      />
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 italic">PROVEN <span className="text-gradient">IMPACT.</span></h1>
           <p className="text-lg text-slate-600 font-medium">Browse our portfolio of high-yield installations across Haryana and the NCR region.</p>
         </div>
 
-        {/* Filter Bar */}
         <div className="flex flex-wrap justify-center gap-3 mb-16">
           {categories.map((cat) => (
             <button
@@ -46,11 +50,10 @@ const Projects: React.FC = () => {
           ))}
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 perspective-1000 mb-32">
           {filteredProjects.map((p) => (
-            <div key={p.id} className="group relative rounded-[2.5rem] overflow-hidden shadow-xl hover-3d transition-all duration-700 h-[450px] border border-white">
-              <img src={p.imageUrl} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale-[0.2] group-hover:grayscale-0" />
+            <article key={p.id} className="group relative rounded-[2.5rem] overflow-hidden shadow-xl hover-3d transition-all duration-700 h-[450px] border border-white">
+              <img src={p.imageUrl} alt={`${p.title} - Solar project in ${p.location}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale-[0.2] group-hover:grayscale-0" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent flex flex-col justify-end p-10 text-white">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-600 text-[10px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-xl shadow-lg">{p.category}</span>
@@ -62,11 +65,10 @@ const Projects: React.FC = () => {
                   <span className="font-black text-green-400 text-2xl tracking-tighter">{p.capacity}</span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* Detailed Hardware Gallery */}
         <div className="mb-32">
           <div className="flex items-center gap-4 mb-12">
             <div className="h-[2px] grow bg-slate-200"></div>
@@ -76,7 +78,7 @@ const Projects: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {galleryImages.map((img, i) => (
               <div key={i} className="group relative aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-crosshair">
-                <img src={img.url} alt={img.title} className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700" />
+                <img src={img.url} alt={`Close up of ${img.title} - ${img.desc}`} className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
                   <p className="text-white font-black text-xs uppercase mb-1">{img.title}</p>
                   <p className="text-green-500 font-bold text-[8px] uppercase tracking-widest">{img.desc}</p>
@@ -86,7 +88,6 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="p-16 bg-white rounded-[3rem] border border-slate-100 shadow-xl text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-32 h-32 bg-green-500/5 blur-3xl rounded-full"></div>
           <h2 className="text-3xl font-black mb-4 tracking-tight">Want to verify our quality?</h2>

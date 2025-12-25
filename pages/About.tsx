@@ -1,10 +1,15 @@
 
 import React from 'react';
 import { COMPANY_NAME, GROUP_NAME, ICONS } from '../constants';
+import { SEO } from '../components/SEO';
 
 const About: React.FC = () => {
   return (
     <div className="pt-40 lg:pt-48 pb-24">
+      <SEO 
+        title="About Us" 
+        description="Learn more about DRG Power Technology, a subsidiary of Sanduja Enterprises. Haryana's premier solar EPC contractor with over 10 years of experience in renewable energy."
+      />
       <div className="container mx-auto px-4">
         {/* Story Section */}
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
@@ -42,7 +47,7 @@ const About: React.FC = () => {
             <div className="rounded-[3rem] overflow-hidden shadow-2xl border border-white hover:scale-[1.02] transition-transform duration-500">
               <img
                 src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=1200"
-                alt="Solar Facility"
+                alt="Solar Facility and Engineering site of DRG Power"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -56,18 +61,18 @@ const About: React.FC = () => {
 
         {/* Mission/Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-32 perspective-1000">
-          <div className="bg-slate-900 text-white p-12 rounded-[3rem] shadow-xl hover:translate-y-[-8px] transition-transform">
+          <section className="bg-slate-900 text-white p-12 rounded-[3rem] shadow-xl hover:translate-y-[-8px] transition-transform">
             <h2 className="text-3xl font-black mb-6 tracking-tight">Our Mission</h2>
             <p className="text-lg text-slate-400 font-medium leading-relaxed">
               To drive energy independence for every household across Haryana through affordable, cutting-edge solar technology and uncompromising installation standards.
             </p>
-          </div>
-          <div className="bg-green-600 text-white p-12 rounded-[3rem] shadow-xl hover:translate-y-[-8px] transition-transform shadow-green-900/10">
+          </section>
+          <section className="bg-green-600 text-white p-12 rounded-[3rem] shadow-xl hover:translate-y-[-8px] transition-transform shadow-green-900/10">
             <h2 className="text-3xl font-black mb-6 tracking-tight">Our Vision</h2>
             <p className="text-lg text-white/90 font-medium leading-relaxed">
               To be the most trusted name in renewable energy for the whole of Haryana, known for our 'Backup Ready' philosophy and engineering that lasts generations.
             </p>
-          </div>
+          </section>
         </div>
 
         {/* Values */}
