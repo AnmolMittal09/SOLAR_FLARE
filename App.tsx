@@ -7,12 +7,11 @@ const Router = HashRouter;
 import { Layout } from './components/Layout.tsx';
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
-import Services from './pages/Services.tsx';
+import Expertise from './pages/Expertise.tsx';
 import HowItWorks from './pages/HowItWorks.tsx';
 import Projects from './pages/Projects.tsx';
 import FAQ from './pages/FAQ.tsx';
 import Contact from './pages/Contact.tsx';
-import Solutions from './pages/Solutions.tsx';
 import Brands from './pages/Brands.tsx';
 
 const App: React.FC = () => {
@@ -22,8 +21,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/expertise" element={<Expertise />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/projects" element={<Projects />} />

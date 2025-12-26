@@ -31,34 +31,20 @@ const Contact: React.FC = () => {
         description="Direct terminal for DRG Power technical audits. Connect with our engineering leads for high-performance solar infrastructure."
       />
       
-      {/* Hero Header */}
-      <section className="pt-48 pb-20 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(190,30,45,0.15)_0%,transparent_50%)]"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl">
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 mb-10">
-              <span className="flex h-2.5 w-2.5 rounded-full bg-[#BE1E2D] animate-pulse"></span>
-              <span className="text-[11px] font-black uppercase tracking-[0.4em] text-white">Project Command Terminal</span>
-            </div>
-            <h1 className="text-6xl md:text-[9rem] font-black text-white leading-[0.8] tracking-tighter mb-8 uppercase italic">
-              SECURE <br />
-              <span className="text-gradient">AUTONOMY.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-400 font-medium max-w-2xl leading-relaxed italic">
-              Initiate your transition to industrial-grade energy independence. Our senior engineering desk is standing by.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 container mx-auto px-6">
+      <section className="pt-48 pb-24 container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Left: Strategic Leads & Info */}
           <div className="lg:col-span-5 space-y-12">
+            <div>
+              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#BE1E2D] mb-4">Direct Contact</h2>
+              <h1 className="text-5xl font-black text-black tracking-tighter uppercase italic leading-none">
+                Connect With <br /> <span className="text-[#BE1E2D]">Our Team.</span>
+              </h1>
+            </div>
             
             <div className="space-y-6">
-              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#BE1E2D]">Strategic Leads</h2>
+              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">Strategic Leads</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <a href={`tel:${PHONE_JATIN}`} className="group p-8 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-black transition-all duration-500 flex flex-col justify-between h-48 shadow-sm hover:shadow-2xl">
                   <span className="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all origin-left">📞</span>
@@ -78,7 +64,7 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#BE1E2D]">Operational Hub</h2>
+              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400">Operational Hub</h2>
               <div className="space-y-4">
                 <a href={`mailto:${EMAIL_ADDRESS}`} className="block p-10 bg-black text-white rounded-3xl border border-white/5 hover:border-[#BE1E2D]/50 transition-all group shadow-2xl overflow-hidden relative">
                   <div className="absolute -bottom-10 -right-10 text-9xl font-black text-white/5 italic select-none">MAIL</div>

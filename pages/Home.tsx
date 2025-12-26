@@ -190,7 +190,7 @@ const SolutionsGrid = () => (
                 </div>
               ))}
             </div>
-            <Link to="/solutions" className="inline-flex items-center gap-4 mt-12 text-[#BE1E2D] font-black uppercase tracking-widest text-xs group-hover:text-black transition-colors">
+            <Link to="/expertise" className="inline-flex items-center gap-4 mt-12 text-[#BE1E2D] font-black uppercase tracking-widest text-xs group-hover:text-black transition-colors">
               Full Specs →
             </Link>
           </div>
@@ -289,7 +289,7 @@ const Domains = () => (
                   <span key={i} className="text-[10px] font-black uppercase tracking-widest bg-slate-100 text-slate-500 px-6 py-3 rounded-full">{f}</span>
                 ))}
               </div>
-              <Link to="/services" className="text-[#BE1E2D] font-black uppercase tracking-widest text-xs flex items-center gap-4 hover:gap-8 transition-all">
+              <Link to="/expertise" className="text-[#BE1E2D] font-black uppercase tracking-widest text-xs flex items-center gap-4 hover:gap-8 transition-all">
                 Project Audit Desk <span>→</span>
               </Link>
             </div>
