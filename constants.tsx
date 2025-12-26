@@ -19,7 +19,8 @@ export const EMAIL_ADDRESS = "drgpower712@gmail.com";
 export const ADDRESS = "Khasra No. 246, Gali No. 1, Main Ghari Road Basai, Gurugram Haryana-122006";
 export const WHATSAPP_LINK = "https://wa.me/919211592425";
 
-export const LOGO_IMAGE = "https://raw.githubusercontent.com/AnmolMittal09/DRG-Power/main/Untitled%20design%20(2).png"; 
+// Encoded URL to handle spaces and special characters correctly
+export const LOGO_IMAGE = "https://raw.githubusercontent.com/AnmolMittal09/DRG-Power/main/Untitled%20design%20%282%29.png"; 
 
 export const VISION = "Powering a cleaner, greener tomorrow — one rooftop at a time.";
 export const MISSION = "Delivering smart, efficient, and affordable rooftop solar energy solutions that empower our customers and reduce carbon footprints.";
