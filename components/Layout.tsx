@@ -250,20 +250,28 @@ const WhatsAppButton: React.FC = () => (
 );
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  
   useEffect(() => {
-    if (window.location.hash) {
-      const element = document.querySelector(window.location.hash);
-      if (element) {
-        // Adding a slight delay to ensure the page has rendered
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+    // If there's an anchor hash (e.g., #solutions), scroll to that element
+    if (hash) {
+      try {
+        const element = document.querySelector(hash);
+        if (element) {
+          // Adding a slight delay to ensure the page has rendered
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      } catch (e) {
+        console.warn("Invalid selector in hash:", hash);
       }
     } else {
+      // Normal page navigation, scroll to top
       window.scrollTo(0, 0);
     }
-  }, [pathname]);
+  }, [pathname, hash]);
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
