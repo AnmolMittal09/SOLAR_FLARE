@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import * as ReactRouterDOM from 'react-router-dom';
 const { Link } = ReactRouterDOM;
-import { SERVICES, ICONS } from '../constants';
+import { SERVICES, SOLUTIONS, ICONS } from '../constants';
 import { SEO } from '../components/SEO';
 
 const ServicesHero = () => {
@@ -46,7 +47,7 @@ const ServicesHero = () => {
           </h1>
 
           <p className="text-xl md:text-3xl text-slate-400 max-w-2xl font-medium animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-200 leading-relaxed italic">
-            Delivering the next generation of power infrastructure with Tier-1 bifacial technology and resilient structural mounting.
+            Delivering high-performance energy infrastructure across India. From residential rooftops to massive industrial plants.
           </p>
         </div>
       </div>
@@ -68,18 +69,54 @@ const ServicesHero = () => {
   );
 };
 
+const SolutionsSection = () => (
+  <section className="py-40 bg-slate-50">
+    <div className="container mx-auto px-6">
+      <div className="text-center mb-24">
+        <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Our Core Expertise</span>
+        <h2 className="text-5xl lg:text-7xl font-black tracking-tighter italic uppercase italic leading-none text-slate-900">ENERGY <span className="text-[#BE1E2D]">SOLUTIONS.</span></h2>
+        <p className="text-xl text-slate-500 mt-6 max-w-2xl mx-auto font-medium italic">We engineer grid-connected, battery-backed, and completely autonomous solar setups.</p>
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-12">
+        {SOLUTIONS.map((sol, i) => (
+          <div key={sol.id} className="bg-white p-12 rounded-[2rem] shadow-xl border border-slate-100 hover:border-[#BE1E2D]/20 transition-all duration-500 group">
+            <div className="text-6xl mb-10 group-hover:scale-110 transition-transform origin-left">{sol.icon}</div>
+            <h3 className="text-3xl font-black mb-6 tracking-tight text-slate-900 uppercase italic">{sol.title}</h3>
+            <p className="text-slate-500 font-medium leading-relaxed mb-10 italic">{sol.desc}</p>
+            <div className="space-y-4">
+              {sol.benefits.map((benefit, idx) => (
+                <div key={idx} className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-slate-400">
+                  <span className="w-1.5 h-1.5 bg-[#BE1E2D] rounded-full"></span>
+                  {benefit}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const Services: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-1000">
       <SEO 
         title="Technical Solutions" 
-        description="Comprehensive industrial solar solutions. Tier-1 modules and smart grid synchronization."
+        description="Comprehensive solar solutions for Residential, Commercial, and Industrial sectors. Tier-1 modules and smart grid synchronization."
       />
       <ServicesHero />
+
+      <SolutionsSection />
       
       <div className="py-40 bg-white">
         <div className="container mx-auto px-6">
           <div className="space-y-48">
+            <div className="text-center mb-12">
+              <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Sector Expertise</span>
+              <h2 className="text-5xl lg:text-7xl font-black tracking-tighter italic uppercase italic leading-none text-slate-900">CORE <span className="text-[#BE1E2D]">SERVICES.</span></h2>
+            </div>
             {SERVICES.map((s, idx) => (
               <section key={s.id} className={`flex flex-col lg:flex-row items-center gap-20 lg:gap-32 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="lg:w-1/2">
@@ -101,7 +138,7 @@ const Services: React.FC = () => {
                     ))}
                   </div>
                   <Link to="/contact" className="inline-flex items-center gap-6 bg-black text-white px-14 py-7 rounded-sm font-black text-xl hover:bg-[#BE1E2D] transition-all shadow-3xl active:scale-95 group uppercase tracking-widest">
-                    Request Full Audit
+                    Request Sector Audit
                     <span className="group-hover:translate-x-2 transition-transform">{ICONS.ChevronRight}</span>
                   </Link>
                 </div>

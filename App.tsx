@@ -12,6 +12,8 @@ import HowItWorks from './pages/HowItWorks.tsx';
 import Projects from './pages/Projects.tsx';
 import FAQ from './pages/FAQ.tsx';
 import Contact from './pages/Contact.tsx';
+import Solutions from './pages/Solutions.tsx';
+import Brands from './pages/Brands.tsx';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +23,8 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/brands" element={<Brands />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/faq" element={<FAQ />} />

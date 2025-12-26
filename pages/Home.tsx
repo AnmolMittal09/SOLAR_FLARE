@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import * as ReactRouterDOM from 'react-router-dom';
 const { Link } = ReactRouterDOM;
-import { SERVICES, ICONS, PHONE_PRIMARY, WHATSAPP_LINK, ESTABLISHED_YEAR, TAGLINE } from '../constants.tsx';
+import { SERVICES, SOLUTIONS, BRANDS, ICONS, PHONE_PRIMARY, WHATSAPP_LINK, ESTABLISHED_YEAR, TAGLINE } from '../constants.tsx';
 import { SEO } from '../components/SEO';
 
 const Hero = () => {
@@ -138,8 +138,21 @@ const InquirySection = () => {
             </div>
             <form onSubmit={handleSubmit} className="lg:w-2/3 grid sm:grid-cols-3 gap-10 w-full">
               <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Full Identity</label>
-                <input required type="text" className="w-full bg-transparent border-b-2 border-slate-200 px-0 py-5 font-black outline-none focus:border-[#BE1E2D] transition-all text-xl uppercase tracking-tighter" placeholder="Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+                <div className="flex items-center gap-2 mb-1">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Full Identity</label>
+                  <div className="group relative">
+                    <span className="cursor-help text-slate-300 hover:text-[#BE1E2D] transition-colors">
+                      <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover:block w-48 p-3 bg-black text-white text-[10px] font-bold uppercase tracking-wider rounded-lg shadow-2xl z-50 animate-in fade-in slide-in-from-bottom-1">
+                      Provide your full legal or business name so our engineers can prepare a formalized technical document for your audit.
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
+                    </div>
+                  </div>
+                </div>
+                <input required type="text" className="w-full bg-transparent border-b-2 border-slate-200 px-0 py-5 font-black outline-none focus:border-[#BE1E2D] transition-all text-xl uppercase tracking-tighter" placeholder="Full Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Contact Terminal</label>
@@ -155,6 +168,62 @@ const InquirySection = () => {
     </section>
   );
 };
+
+const SolutionsGrid = () => (
+  <section className="py-40 bg-black text-white overflow-hidden">
+    <div className="container mx-auto px-6">
+      <div className="text-center mb-32">
+        <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">The Tech Stack</span>
+        <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic leading-none">High Efficiency <br /><span className="text-[#BE1E2D]">Solutions.</span></h2>
+      </div>
+      <div className="grid lg:grid-cols-3 gap-10">
+        {SOLUTIONS.map((sol, i) => (
+          <div key={sol.id} className="group p-16 bg-white/5 border border-white/10 rounded-[3rem] hover:bg-white hover:text-black transition-all duration-700 shadow-2xl">
+            <div className="text-7xl mb-12 group-hover:scale-110 transition-transform origin-left">{sol.icon}</div>
+            <h3 className="text-3xl font-black mb-6 tracking-tight uppercase italic">{sol.title}</h3>
+            <p className="text-white/40 group-hover:text-black/60 font-medium leading-relaxed mb-10 italic">{sol.desc}</p>
+            <div className="space-y-4">
+              {sol.benefits.map((benefit, idx) => (
+                <div key={idx} className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest">
+                  <span className="w-1.5 h-1.5 bg-[#BE1E2D] rounded-full"></span>
+                  {benefit}
+                </div>
+              ))}
+            </div>
+            <Link to="/solutions" className="inline-flex items-center gap-4 mt-12 text-[#BE1E2D] font-black uppercase tracking-widest text-xs group-hover:text-black transition-colors">
+              Full Specs →
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const SolarBrands = () => (
+  <section className="py-32 bg-white">
+    <div className="container mx-auto px-6">
+      <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
+        <div className="max-w-2xl">
+          <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Hardware Integrity</span>
+          <h2 className="text-6xl font-black tracking-tighter text-slate-900 uppercase italic leading-none">Tier-1 <br />Partnerships.</h2>
+        </div>
+        <p className="text-xl text-slate-400 font-medium italic max-w-sm">We exclusively utilize components from globally recognized leaders in renewable energy.</p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        {BRANDS.map((brand, i) => (
+          <div key={i} className="group bg-slate-50 p-10 rounded-3xl border border-slate-100 flex flex-col items-center justify-center text-center hover:bg-slate-900 hover:text-white transition-all duration-500">
+            <span className="text-[10px] font-black uppercase tracking-widest mb-4 text-[#BE1E2D]">{brand.role}</span>
+            <span className="text-2xl font-black tracking-tighter uppercase group-hover:scale-110 transition-transform">{brand.name}</span>
+          </div>
+        ))}
+      </div>
+      <div className="text-center mt-20">
+        <Link to="/brands" className="text-xs font-black uppercase tracking-widest text-slate-400 hover:text-[#BE1E2D] transition-colors">View All Quality Standards →</Link>
+      </div>
+    </div>
+  </section>
+);
 
 const WhyChooseUs = () => {
   const reasons = [
@@ -200,7 +269,7 @@ const Domains = () => (
         <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-4 block">Our Expertise</span>
         <h2 className="text-6xl font-black tracking-tighter text-slate-900 uppercase italic">Premium Segments.</h2>
       </div>
-      <div className="grid lg:grid-cols-2 gap-10">
+      <div className="grid lg:grid-cols-3 gap-10">
         {SERVICES.map((s) => (
           <div key={s.id} className="group relative bg-white rounded-[4rem] overflow-hidden shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-700">
             <div className="relative h-80 overflow-hidden">
@@ -242,6 +311,10 @@ const Home: React.FC = () => {
       <InquirySection />
       
       <WhyChooseUs />
+
+      <SolutionsGrid />
+
+      <SolarBrands />
 
       <Domains />
 

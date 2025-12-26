@@ -53,25 +53,97 @@ export const ICONS = {
   Commercial: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
   Check: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>,
   ChevronRight: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>,
-  Quote: <svg className="w-8 h-8 opacity-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V21H14.017ZM6.017 21L6.017 18C6.017 16.8954 6.91243 16 8.017 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.017C6.46472 8 6.017 8.44772 6.017 9V11C6.017 11.5523 5.56929 12 5.017 12H4.017V21H6.017Z" /></svg>
+  Quote: <svg className="w-8 h-8 opacity-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V21H14.017ZM6.017 21L6.017 18C6.017 16.8954 6.91243 16 8.017 16H11.017C11.5693 16 12.017 15.5523 12.017 15V9C12.017 8.44772 11.5693 8 11.017 8H7.017C6.46472 8 6.017 8.44772 6.017 9V11C6.017 11.5523 5.56929 12 5.017 12H4.017V21H6.017Z" /></svg>,
+  Factory: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
 };
 
 export const SERVICES: Service[] = [
   {
-    id: "homes",
-    title: "Solar for Households",
-    description: "Designing, supplying, and installing solar power systems tailored for modern homes across India. Empower your family with renewable energy.",
+    id: "residential",
+    title: "Residential Solar",
+    description: "Personalized rooftop solar ecosystems for modern homes. Reduce monthly bills and transition to energy autonomy with Tier-1 components.",
     icon: ICONS.Home,
-    features: ["End-to-end Solutions", "Site Evaluation", "Bespoke System Design", "After-sales Support"],
+    features: ["Rooftop Optimization", "Smart Monitoring", "Seamless Net-metering", "25-Year Performance Warranty"],
     imageUrl: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=70&w=1000"
   },
   {
     id: "commercial",
-    title: "Commercial Spaces",
-    description: "Forward-looking solar solutions for commercial establishments. Reduce operational costs and carbon footprint through smart energy firm expertise.",
+    title: "Commercial Solar",
+    description: "High-yield solar infrastructure for offices, retail hubs, and schools. Protect your business from rising tariff rates with fixed energy costs.",
     icon: ICONS.Commercial,
-    features: ["Cost-effective Solutions", "Scalable Projects", "System Monitoring", "Expert Installation"],
+    features: ["Zero-investment Models", "Scalable PV Arrays", "Operational Cost Reduction", "CSR Compliance Support"],
     imageUrl: "https://images.unsplash.com/photo-1594818379496-da1e345b0ded?auto=format&fit=crop&q=70&w=1000"
+  },
+  {
+    id: "industrial",
+    title: "Industrial Solar",
+    description: "Massive scale solar deployment for factories and manufacturing plants. Engineering resilient systems for continuous high-load operations.",
+    icon: ICONS.Factory,
+    features: ["MW-scale Solutions", "Grid-tie Synchronization", "Industrial Load Management", "Structural Integrity Focus"],
+    imageUrl: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&q=70&w=1000"
+  }
+];
+
+export const SOLUTIONS = [
+  {
+    id: "on-grid",
+    title: "On-Grid Systems",
+    desc: "The most efficient way to reduce bills. Export excess power to the utility grid and earn credits through Net-metering.",
+    icon: "🔌",
+    benefits: ["Zero Battery Costs", "Maximizes ROI", "Govt. Subsidies", "No Maintenance"]
+  },
+  {
+    id: "off-grid",
+    title: "Off-Grid Systems",
+    desc: "Total independence. Store power in high-capacity batteries to power your property even in areas with no utility grid.",
+    icon: "🔋",
+    benefits: ["100% Autonomy", "Backup Power", "Ideal for Remote Areas", "Grid-Independent"]
+  },
+  {
+    id: "hybrid",
+    title: "Hybrid Systems",
+    desc: "The best of both worlds. Stay connected to the grid while maintaining a battery bank for critical backup during outages.",
+    icon: "⚡",
+    benefits: ["Priority Backup", "Peak Shaving", "Ultimate Reliability", "Smart Management"]
+  }
+];
+
+export const BRANDS = [
+  { 
+    name: "Livguard", 
+    role: "Strategic Partner", 
+    desc: "India's leading energy storage and solar solutions brand with extensive R&D.",
+    logo: "https://www.livguard.com/static/images/livguard-logo.png" 
+  },
+  { 
+    name: "Waree", 
+    role: "Module Partner", 
+    desc: "Global leader in high-efficiency solar photovoltaic (PV) modules.",
+    logo: "https://www.waaree.com/images/logo.png" 
+  },
+  { 
+    name: "Jakson", 
+    role: "Infrastructure Partner", 
+    desc: "Diversified energy company providing end-to-end solar EPC solutions.",
+    logo: "https://www.jakson.com/images/logo.png" 
+  },
+  { 
+    name: "Tata Power", 
+    role: "Trust Partner", 
+    desc: "Unmatched reliability and legacy in India's power generation sector.",
+    logo: "https://www.tatapowersolar.com/wp-content/themes/tatapower/images/logo.png" 
+  },
+  { 
+    name: "Growatt", 
+    role: "Inverter Partner", 
+    desc: "Specialized in smart energy solutions including efficient grid-tie inverters.",
+    logo: "https://www.growatt.com/static/images/logo.png" 
+  },
+  { 
+    name: "Sungrow", 
+    role: "Technology Partner", 
+    desc: "The world's most bankable inverter brand with global installations.",
+    logo: "https://en.sungrowpower.com/images/logo.png" 
   }
 ];
 

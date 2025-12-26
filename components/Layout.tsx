@@ -33,7 +33,7 @@ const Logo: React.FC<{ footer?: boolean }> = ({ footer }) => {
       <div className="ml-4 flex flex-col justify-center border-l border-white/20 pl-4">
         <div className="flex flex-col">
           <span className="text-xl font-black tracking-tighter leading-none text-white uppercase">
-            DRG <span className={`${footer ? 'text-white' : 'text-[#BE1E2D]'}`}>{footer ? 'TECH' : 'POWER'}</span>
+            DRG <span className={`${footer ? 'text-white' : 'text-[#BE1E2D]'}`}>POWER</span>
           </span>
           {!footer && <span className="text-[7px] font-black uppercase tracking-[0.4em] text-white/60 leading-none mt-1.5">Technology</span>}
         </div>
@@ -59,10 +59,10 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'Solutions', path: '/solutions' },
     { name: 'Services', path: '/services' },
-    { name: 'How It Works', path: '/how-it-works' },
+    { name: 'Brands', path: '/brands' },
     { name: 'Projects', path: '/projects' },
-    { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -163,9 +163,9 @@ const Footer: React.FC = () => (
         <div className="space-y-8">
           <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Navigation</h3>
           <ul className="space-y-5">
-            <li><Link to="/" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Home</Link></li>
-            <li><Link to="/about" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">About</Link></li>
+            <li><Link to="/solutions" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Solutions</Link></li>
             <li><Link to="/services" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Services</Link></li>
+            <li><Link to="/brands" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Brands</Link></li>
             <li><Link to="/how-it-works" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">How It Works</Link></li>
           </ul>
         </div>
