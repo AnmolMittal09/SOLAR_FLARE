@@ -4,105 +4,108 @@ import { SEO } from '../components/SEO';
 
 const About: React.FC = () => {
   return (
-    <div className="pt-40 lg:pt-48 pb-24">
+    <div className="pt-48 pb-32">
       <SEO 
-        title="About Us" 
-        description={`DRG Power Technology, established in ${ESTABLISHED_YEAR}, is a forward-looking solar energy firm under the umbrella of ${GROUP_NAME}. Partnered with ${PARTNER_BRAND} since ${PARTNERSHIP_YEAR}.`}
+        title="Industrial Heritage" 
+        description={`DRG Power Technology, established in ${ESTABLISHED_YEAR}, is an industrial solar energy firm under the umbrella of ${GROUP_NAME}. Partnered with ${PARTNER_BRAND} since ${PARTNERSHIP_YEAR}.`}
       />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         {/* Company Overview Section */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
-          <div className="perspective-1000">
-            <span className="text-green-600 font-black uppercase tracking-widest text-xs mb-4 block">Company Overview</span>
-            <h1 className="text-4xl md:text-6xl font-black mb-8 leading-[0.95] tracking-tighter">
-              DRG Power <span className="text-gradient">Technology</span>
+        <div className="grid lg:grid-cols-2 gap-24 items-center mb-48">
+          <div className="reveal">
+            <span className="text-[#BE1E2D] font-black uppercase tracking-[0.6em] text-[10px] mb-8 block">Corporate Identity</span>
+            <h1 className="text-6xl md:text-8xl font-black mb-12 leading-[0.85] tracking-tighter italic uppercase">
+              DRG Power <br /><span className="text-gradient">Technology.</span>
             </h1>
-            <div className="space-y-6 text-lg text-slate-600 font-medium leading-relaxed">
+            <div className="space-y-10 text-xl text-slate-500 font-medium leading-relaxed">
               <p>
-                Established in <span className="text-slate-900 font-bold">{ESTABLISHED_YEAR}</span> and headquartered in Gurugram, <span className="text-slate-900 font-bold">{COMPANY_NAME}</span> is a forward-looking solar energy firm under the umbrella of <span className="text-slate-900 font-bold">{GROUP_NAME}</span>.
+                Established in <span className="text-black font-black uppercase tracking-widest text-sm">{ESTABLISHED_YEAR}</span>, <span className="text-black font-black">{COMPANY_NAME}</span> is a dedicated energy infrastructure firm under the umbrella of <span className="text-black font-black">{GROUP_NAME}</span>.
               </p>
               <p>
-                We are dedicated to bringing sustainable, cost-effective solar power solutions to homes and commercial establishments. We specialize in end-to-end solar solutions — from site evaluation and system design to supply, installation, and after-sales support.
+                We deliver high-yield solar assets to India's most demanding residential and commercial corridors. Our expertise spans from initial thermal auditing to the final synchronization with the smart grid.
               </p>
               <p>
-                Since <span className="text-green-600 font-bold">{PARTNERSHIP_YEAR}</span>, <span className="text-slate-900 font-bold">{GROUP_NAME}</span> has proudly partnered with <span className="text-slate-900 font-bold">{PARTNER_BRAND}</span> — one of India's leading energy storage and power solutions brands. Over the years, we have successfully managed a complete distribution network, ensuring timely supply and exceptional customer service.
+                Since <span className="text-[#BE1E2D] font-black">{PARTNERSHIP_YEAR}</span>, our group has proudly partnered with <span className="text-black font-black">{PARTNER_BRAND}</span>, ensuring our systems are powered by one of India's most trusted energy storage brands.
               </p>
             </div>
             
-            <div className="mt-12 flex items-center gap-10">
-              <div className="text-center">
-                <p className="text-4xl font-black text-green-600 mb-1 tracking-tighter">{ESTABLISHED_YEAR}</p>
-                <p className="text-[10px] uppercase font-black tracking-widest text-slate-400">Founded</p>
+            <div className="mt-16 flex items-center gap-16 border-t border-slate-100 pt-12">
+              <div className="flex flex-col">
+                <p className="text-5xl font-[900] text-black tracking-tighter mb-2">{ESTABLISHED_YEAR}</p>
+                <p className="text-[10px] uppercase font-black tracking-widest text-slate-400">Inception</p>
               </div>
-              <div className="text-center">
-                <p className="text-4xl font-black text-green-600 mb-1 tracking-tighter">India</p>
-                <p className="text-[10px] uppercase font-black tracking-widest text-slate-400">Wide reach</p>
+              <div className="flex flex-col">
+                <p className="text-5xl font-[900] text-[#BE1E2D] tracking-tighter mb-2">12Y+</p>
+                <p className="text-[10px] uppercase font-black tracking-widest text-slate-400">Energy Expertise</p>
               </div>
             </div>
           </div>
           
-          <div className="relative perspective-1000 group">
-            <div className="absolute inset-0 bg-green-600 rounded-[3rem] translate-x-4 translate-y-4 -z-10 opacity-10 blur-xl"></div>
-            <div className="rounded-[3rem] overflow-hidden shadow-2xl border border-white hover:scale-[1.02] transition-transform duration-500">
+          <div className="relative group">
+            <div className="absolute -inset-10 bg-red-600/5 blur-3xl rounded-full opacity-50"></div>
+            <div className="relative rounded-sm overflow-hidden border border-slate-100 shadow-3xl">
               <img
                 src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=1200"
                 alt="Solar Technology Overview"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
-            <div className="absolute -bottom-8 -right-8 glass p-8 rounded-3xl shadow-2xl border border-slate-100 animate-float">
-              <div className="text-green-600 mb-4">{ICONS.Sun}</div>
-              <p className="text-2xl font-black text-slate-900 leading-none">Pan-India</p>
-              <p className="text-sm font-bold text-slate-500">Solar Partner</p>
+            <div className="absolute -bottom-10 -right-10 bg-black p-10 rounded-sm shadow-3xl border border-white/10 animate-float hidden lg:block">
+              <div className="text-[#BE1E2D] mb-6">{ICONS.Sun}</div>
+              <p className="text-3xl font-black text-white leading-none tracking-tighter uppercase italic">PAN-INDIA</p>
+              <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-2">Certified Network</p>
             </div>
           </div>
         </div>
 
         {/* Leadership Section */}
-        <div className="mb-32">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black tracking-tighter mb-4 italic uppercase">Our <span className="text-gradient">Leadership.</span></h2>
-            <p className="text-slate-500 font-medium max-w-2xl mx-auto">Blending technical expertise with strategic vision to guide DRG Power Technology toward a greener future.</p>
+        <div className="mb-48">
+          <div className="text-center mb-24">
+            <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Command Centre</span>
+            <h2 className="text-6xl font-black tracking-tighter mb-8 italic uppercase italic">Our <span className="text-gradient">Leadership.</span></h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {LEADERSHIP.map((leader, i) => (
-              <div key={i} className="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-xl hover:translate-y-[-8px] transition-transform flex flex-col items-center text-center">
-                <div className="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center text-4xl mb-6 shadow-inner">👤</div>
-                <h3 className="text-2xl font-black text-slate-900 mb-2">{leader.name}</h3>
-                <p className="text-green-600 font-black uppercase tracking-widest text-[10px] mb-4">{leader.role}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">{leader.bio}</p>
+              <div key={i} className="bg-white p-16 rounded-sm border border-slate-100 shadow-xl hover:bg-slate-50 transition-colors flex flex-col items-center text-center group">
+                <div className="w-32 h-32 bg-slate-900 text-white rounded-sm flex items-center justify-center text-5xl mb-10 shadow-2xl group-hover:rotate-12 transition-transform">👤</div>
+                <h3 className="text-3xl font-black text-slate-900 mb-4 tracking-tighter uppercase">{leader.name}</h3>
+                <p className="text-[#BE1E2D] font-black uppercase tracking-widest text-[11px] mb-8">{leader.role}</p>
+                <p className="text-slate-500 text-lg leading-relaxed font-medium">{leader.bio}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Vision/Mission Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-32 perspective-1000">
-          <section className="bg-slate-900 text-white p-12 rounded-[3rem] shadow-xl hover:translate-y-[-8px] transition-transform">
-            <h2 className="text-3xl font-black mb-6 tracking-tight">Our Mission</h2>
-            <p className="text-lg text-slate-400 font-medium leading-relaxed">
+        <div className="grid md:grid-cols-2 gap-12 mb-48">
+          <section className="bg-black text-white p-20 rounded-sm shadow-3xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 text-[15rem] font-black text-white/5 leading-none select-none pointer-events-none -translate-y-1/2">MISSION</div>
+            <h2 className="text-4xl font-black mb-10 tracking-tight uppercase italic relative z-10">The Mission</h2>
+            <p className="text-2xl text-slate-400 font-medium leading-relaxed relative z-10 italic">
               {MISSION}
             </p>
           </section>
-          <section className="bg-green-600 text-white p-12 rounded-[3rem] shadow-xl hover:translate-y-[-8px] transition-transform shadow-green-900/10">
-            <h2 className="text-3xl font-black mb-6 tracking-tight">Our Vision</h2>
-            <p className="text-lg text-white/90 font-medium leading-relaxed">
+          <section className="bg-[#BE1E2D] text-white p-20 rounded-sm shadow-3xl relative overflow-hidden group shadow-red-900/40">
+            <div className="absolute top-0 right-0 text-[15rem] font-black text-black/5 leading-none select-none pointer-events-none -translate-y-1/2">VISION</div>
+            <h2 className="text-4xl font-black mb-10 tracking-tight uppercase italic relative z-10">The Vision</h2>
+            <p className="text-2xl text-white/90 font-medium leading-relaxed relative z-10 italic">
               {VISION}
             </p>
           </section>
         </div>
 
         {/* Values Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-black tracking-tighter mb-4 italic uppercase">Core <span className="text-gradient">Values.</span></h2>
-          <p className="text-slate-500 font-medium">The values that drive our commitment to excellence and sustainability.</p>
+        <div className="text-center mb-24">
+          <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Foundation</span>
+          <h2 className="text-6xl font-black tracking-tighter mb-8 italic uppercase italic">Core <span className="text-gradient">Principles.</span></h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-px bg-slate-100 border border-slate-100">
           {CORE_VALUES.map((v, i) => (
-            <div key={i} className="bg-white p-8 rounded-[2rem] text-center border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:translate-y-[-4px]">
-              <div className="text-4xl mb-6">{v.icon}</div>
-              <h3 className="text-xl font-black mb-4 tracking-tight leading-tight">{v.title}</h3>
-              <p className="text-slate-500 font-medium leading-relaxed text-xs">{v.desc}</p>
+            <div key={i} className="bg-white p-12 text-center hover:bg-slate-50 transition-colors group">
+              <div className="text-5xl mb-10 group-hover:scale-110 transition-transform">{v.icon}</div>
+              <h3 className="text-xl font-black mb-6 tracking-tighter leading-none uppercase">{v.title}</h3>
+              <p className="text-slate-500 font-medium leading-relaxed text-sm">{v.desc}</p>
             </div>
           ))}
         </div>

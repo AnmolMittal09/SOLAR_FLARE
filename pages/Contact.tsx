@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const message = `Hello, I am interested in solar panel installation.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nCity: ${formData.city}\nRequirement: ${formData.requirement}\nMessage: ${formData.message}`;
+    const message = `Project Inquiry Submission:\nName: ${formData.name}\nPhone: ${formData.phone}\nCity: ${formData.city}\nRequirement: ${formData.requirement}\nMessage: ${formData.message}`;
     
     setTimeout(() => {
       setIsSubmitting(false);
@@ -24,72 +24,72 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 lg:pt-48 pb-24 bg-white selection:bg-green-100">
+    <div className="pt-48 pb-32 bg-white">
       <SEO 
-        title="Contact Us" 
-        description="Get a free solar audit. Contact DRG Power Technology for residential, commercial, and industrial solar inquiries. Visit our regional HQ in Gurugram."
+        title="Project Desk" 
+        description="Connect with DRG Power senior engineers for residential and commercial solar audits."
       />
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-6">
         
-        <div className="max-w-4xl mb-16 lg:mb-24">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 mb-6">
-            <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-green-700">India-Wide Service Coverage</span>
+        <div className="max-w-5xl mb-32">
+          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-red-50 border border-red-100 mb-10">
+            <span className="flex h-2.5 w-2.5 rounded-full bg-[#BE1E2D] animate-pulse"></span>
+            <span className="text-[11px] font-[900] uppercase tracking-[0.4em] text-[#BE1E2D]">Global Service Standard</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-[900] text-slate-950 leading-[0.9] tracking-tighter mb-8">
+          <h1 className="text-6xl md:text-[9.5rem] font-[900] text-black leading-[0.85] tracking-tighter mb-12 uppercase italic">
             LET'S <span className="text-gradient">CONNECT.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-500 font-medium max-w-2xl leading-relaxed">
-            Switching to solar is a big decision. Our team is here to make the transition transparent, affordable, and professional.
+          <p className="text-2xl md:text-3xl text-slate-500 font-medium max-w-3xl leading-relaxed italic">
+            Your transition to energy autonomy starts with a single high-fidelity technical audit.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-20 items-start">
           
-          <div className="lg:col-span-5 space-y-12">
+          <div className="lg:col-span-5 space-y-16">
             
-            <div className="grid gap-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <a href={`tel:${PHONE_JATIN}`} className="group p-6 bg-slate-50 rounded-[2rem] border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500 flex flex-col gap-4">
-                  <div className="w-10 h-10 bg-white text-green-700 rounded-xl flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+            <div className="grid gap-10">
+              <div className="grid sm:grid-cols-2 gap-6">
+                <a href={`tel:${PHONE_JATIN}`} className="group p-10 bg-slate-900 text-white rounded-sm shadow-3xl hover:bg-black transition-all duration-500 border border-white/5 flex flex-col gap-6">
+                  <div className="w-12 h-12 bg-white text-black rounded-sm flex items-center justify-center shrink-0 shadow-2xl group-hover:rotate-12 transition-transform">
                     📞
                   </div>
                   <div>
-                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Director - Jatin</p>
-                    <p className="text-sm font-black text-slate-900 group-hover:text-green-700 transition-colors">{PHONE_JATIN}</p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Director Desk</p>
+                    <p className="text-lg font-black group-hover:text-[#BE1E2D] transition-colors">{PHONE_JATIN}</p>
                   </div>
                 </a>
-                <a href={`tel:${PHONE_DHIRAJ}`} className="group p-6 bg-slate-50 rounded-[2rem] border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500 flex flex-col gap-4">
-                  <div className="w-10 h-10 bg-white text-green-700 rounded-xl flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+                <a href={`tel:${PHONE_DHIRAJ}`} className="group p-10 bg-slate-900 text-white rounded-sm shadow-3xl hover:bg-black transition-all duration-500 border border-white/5 flex flex-col gap-6">
+                  <div className="w-12 h-12 bg-white text-black rounded-sm flex items-center justify-center shrink-0 shadow-2xl group-hover:rotate-12 transition-transform">
                     📞
                   </div>
                   <div>
-                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Director - Dhiraj</p>
-                    <p className="text-sm font-black text-slate-900 group-hover:text-green-700 transition-colors">{PHONE_DHIRAJ}</p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Technical Lead</p>
+                    <p className="text-lg font-black group-hover:text-[#BE1E2D] transition-colors">{PHONE_DHIRAJ}</p>
                   </div>
                 </a>
               </div>
 
-              <a href={`mailto:${EMAIL_ADDRESS}`} className="group p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 flex items-start gap-6">
-                <div className="w-14 h-14 bg-white text-green-700 rounded-2xl flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                  <span className="text-2xl">✉️</span>
+              <a href={`mailto:${EMAIL_ADDRESS}`} className="group p-12 bg-white rounded-sm border border-slate-100 shadow-3xl hover:border-[#BE1E2D]/30 transition-all duration-500 flex items-start gap-10">
+                <div className="w-16 h-16 bg-black text-white rounded-sm flex items-center justify-center shrink-0 shadow-3xl group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                  <span className="text-3xl">✉️</span>
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Corporate Inquiries</p>
-                  <p className="text-xl font-black text-slate-900 group-hover:text-green-700 transition-colors break-all">{EMAIL_ADDRESS}</p>
-                  <p className="text-sm font-bold text-slate-400 mt-1">Response within 4 hours</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Corporate Channel</p>
+                  <p className="text-2xl font-black text-black group-hover:text-[#BE1E2D] transition-colors break-all leading-none tracking-tighter uppercase italic">{EMAIL_ADDRESS}</p>
+                  <p className="text-xs font-bold text-slate-400 mt-3 uppercase tracking-widest">Rapid Response Protocol</p>
                 </div>
               </a>
 
-              <div className="p-8 bg-slate-950 text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-green-600/20 blur-3xl rounded-full"></div>
-                <div className="relative z-10 flex items-start gap-6">
-                  <div className="w-14 h-14 bg-white/10 text-green-400 rounded-2xl flex items-center justify-center shrink-0 border border-white/10">
-                    <span className="text-2xl">📍</span>
+              <div className="p-12 bg-black text-white rounded-sm shadow-3xl relative overflow-hidden group border border-white/10">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-red-600/10 blur-[100px] rounded-full"></div>
+                <div className="relative z-10 flex items-start gap-10">
+                  <div className="w-16 h-16 bg-white text-black rounded-sm flex items-center justify-center shrink-0 shadow-2xl">
+                    <span className="text-3xl">📍</span>
                   </div>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-white/40 mb-1">Corporate HQ</p>
-                    <address className="text-lg font-bold leading-snug not-italic">
+                    <p className="text-[10px] font-black uppercase tracking-widest text-white/40 mb-3">Industrial HQ</p>
+                    <address className="text-2xl font-black leading-snug not-italic uppercase tracking-tighter italic">
                       {ADDRESS}
                     </address>
                   </div>
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-slate-50 aspect-video lg:aspect-square relative group bg-slate-200">
+            <div className="rounded-sm overflow-hidden shadow-3xl border border-slate-100 aspect-square relative group bg-slate-900">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.828551733224!2d76.97556107528216!3d28.45465717576288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzE2LjgiTiA3Niw1OCc0MS4zIkU!5e0!3m2!1sen!2sin!4v1715870000000!5m2!1sen!2sin" 
                 width="100%" 
@@ -105,111 +105,109 @@ const Contact: React.FC = () => {
                 style={{ border: 0 }} 
                 allowFullScreen={true} 
                 loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="DRG Power Technology Location Map in Gurugram"
-                className="grayscale-[0.3] contrast-[1.1] group-hover:grayscale-0 transition-all duration-700"
+                title="DRG Power Location Map"
+                className="grayscale contrast-125 group-hover:grayscale-0 transition-all duration-1000 brightness-75 group-hover:brightness-100"
               ></iframe>
             </div>
           </div>
 
           <div className="lg:col-span-7">
-            <div className="bg-white p-10 lg:p-16 rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] border border-slate-100 sticky top-32">
-              <div className="mb-12">
-                <h2 className="text-3xl font-black mb-4 tracking-tight text-slate-950 italic uppercase">
-                  Project <span className="text-gradient">Inquiry.</span>
+            <div className="bg-white p-16 lg:p-24 rounded-sm shadow-3xl border border-slate-100 sticky top-32">
+              <div className="mb-16">
+                 <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Direct Transmit</span>
+                 <h2 className="text-4xl lg:text-6xl font-black mb-6 tracking-tighter text-black italic uppercase italic leading-none">
+                  Project <span className="text-gradient">Audit.</span>
                 </h2>
-                <p className="text-slate-500 font-medium">Fill in the details below for a customized solar design and payback analysis.</p>
+                <p className="text-xl text-slate-500 font-medium italic">High-fidelity data analysis for your facility's energy future.</p>
               </div>
 
               {showSuccess ? (
-                <div className="py-20 text-center animate-in fade-in zoom-in duration-500">
-                  <div className="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-inner">
+                <div className="py-24 text-center animate-in fade-in zoom-in duration-500">
+                  <div className="w-32 h-32 bg-red-50 text-[#BE1E2D] rounded-full flex items-center justify-center mx-auto mb-10 text-5xl shadow-inner border border-red-100">
                     ✓
                   </div>
-                  <h3 className="text-3xl font-black text-slate-950 mb-4">Request Received!</h3>
-                  <p className="text-slate-500 font-medium max-w-xs mx-auto">Redirecting you to WhatsApp to connect with our technical desk...</p>
+                  <h3 className="text-4xl font-black text-black mb-6 uppercase tracking-tighter italic">Transmission Received</h3>
+                  <p className="text-xl text-slate-500 font-medium italic">Establishing priority connection with the project desk...</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Full Name</label>
+                <form onSubmit={handleSubmit} className="space-y-10">
+                  <div className="grid md:grid-cols-2 gap-10">
+                    <div className="space-y-3">
+                      <label htmlFor="name" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Full Identity</label>
                       <input
                         id="name"
                         required
                         type="text"
-                        className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all font-bold text-slate-900"
-                        placeholder="Your Name"
+                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg"
+                        placeholder="Project Lead Name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Phone Number</label>
+                    <div className="space-y-3">
+                      <label htmlFor="phone" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Secure Contact</label>
                       <input
                         id="phone"
                         required
                         type="tel"
-                        className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all font-bold text-slate-900"
-                        placeholder="+91"
+                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg"
+                        placeholder="Phone Terminal"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       />
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label htmlFor="city" className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Location / City</label>
+                  <div className="grid md:grid-cols-2 gap-10">
+                    <div className="space-y-3">
+                      <label htmlFor="city" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Deployment Location</label>
                       <input
                         id="city"
                         required
                         type="text"
-                        className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all font-bold text-slate-900"
-                        placeholder="e.g. Gurugram"
+                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg"
+                        placeholder="Area / City"
                         value={formData.city}
                         onChange={(e) => setFormData({...formData, city: e.target.value})}
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="requirement" className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Requirement Type</label>
-                      <div className="relative">
-                        <select 
-                          id="requirement"
-                          className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all appearance-none font-bold text-slate-900 cursor-pointer"
-                          value={formData.requirement}
-                          onChange={(e) => setFormData({...formData, requirement: e.target.value})}
-                        >
-                          <option value="Residential">Residential Solar</option>
-                          <option value="Commercial">Commercial Solar</option>
-                          <option value="Industrial">Industrial Plant</option>
-                          <option value="AMC/Service">Maintenance Only</option>
-                        </select>
-                      </div>
+                    <div className="space-y-3">
+                      <label htmlFor="requirement" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Segment</label>
+                      <select 
+                        id="requirement"
+                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg cursor-pointer appearance-none"
+                        value={formData.requirement}
+                        onChange={(e) => setFormData({...formData, requirement: e.target.value})}
+                      >
+                        <option value="Residential">Residential Array</option>
+                        <option value="Commercial">Commercial Grid</option>
+                        <option value="Industrial">Industrial Plant</option>
+                        <option value="AMC/Service">Maintenance Loop</option>
+                      </select>
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Additional Details</label>
+                  <div className="space-y-3">
+                    <label htmlFor="message" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Project Particulars</label>
                     <textarea
                       id="message"
                       rows={4}
-                      className="w-full px-8 py-5 rounded-2xl bg-slate-50 border border-slate-100 focus:bg-white focus:ring-4 focus:ring-green-100 focus:border-green-500 outline-none transition-all font-bold text-slate-900 resize-none"
-                      placeholder="e.g. Roof size, monthly electricity bill, etc."
+                      className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg resize-none"
+                      placeholder="Load specs or energy targets..."
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                     ></textarea>
                   </div>
 
-                  <div className="pt-4">
+                  <div className="pt-8">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`group w-full py-6 lg:py-8 rounded-3xl text-white font-black text-xl lg:text-2xl shadow-2xl transition-all active:scale-[0.98] flex items-center justify-center gap-4 ${
-                        isSubmitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-slate-950 hover:bg-green-700 shadow-slate-200'
+                      className={`w-full py-8 rounded-sm text-white font-[900] text-2xl shadow-3xl transition-all active:scale-[0.98] flex items-center justify-center gap-6 uppercase tracking-[0.4em] ${
+                        isSubmitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-black hover:bg-[#BE1E2D] shadow-red-900/10'
                       }`}
                     >
-                      TALK TO AN EXPERT
+                      TRANSMIT DATA
                     </button>
                   </div>
                 </form>
