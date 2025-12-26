@@ -206,6 +206,85 @@ const QuickInquirySection = () => {
   );
 };
 
+const WhyChooseSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const features = [
+    {
+      title: "Decades of Legacy",
+      desc: "Deep-rooted expertise since 2012 as part of the Sanduja Enterprises group, delivering trust and reliability.",
+      icon: "🏗️"
+    },
+    {
+      title: "Tier-1 Engineering",
+      desc: "We exclusively deploy world-class components and Tier-1 modules from global leaders like Livguard.",
+      icon: "💎"
+    },
+    {
+      title: "Pan-India Reach",
+      desc: "State-of-the-art solar installations across residential, commercial, and industrial segments nationwide.",
+      icon: "🇮🇳"
+    },
+    {
+      title: "24/7 Smart Support",
+      desc: "Comprehensive after-sales ecosystem with real-time performance monitoring and lifetime technical support.",
+      icon: "⚡"
+    }
+  ];
+
+  return (
+    <section ref={sectionRef} className="py-32 lg:py-48 relative bg-white overflow-hidden perspective-2000">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-24 relative z-10">
+          <span className="text-green-600 font-black uppercase tracking-[0.4em] text-xs mb-4 block animate-pulse">Why Choose DRG Power?</span>
+          <h2 className="text-5xl lg:text-9xl font-[900] tracking-tighter leading-none italic uppercase">
+            THE <span className="text-gradient">ADVANTAGE.</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14 relative z-10">
+          {features.map((f, i) => (
+            <div 
+              key={i}
+              className={`group bg-white p-10 rounded-[3rem] border border-slate-100 shadow-2xl transition-all duration-1000 ease-out flex flex-col items-center text-center preserve-3d will-change-transform ${
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+              }`}
+              style={{ 
+                transitionDelay: `${i * 150}ms`,
+                transform: isVisible ? `translateZ(${100 - i * 10}px) rotateX(${isVisible ? '0deg' : '15deg'})` : 'none'
+              }}
+            >
+              <div className="w-24 h-24 bg-slate-50 rounded-[2rem] flex items-center justify-center text-5xl mb-10 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-inner">
+                {f.icon}
+              </div>
+              <h3 className="text-2xl font-black text-slate-950 mb-6 tracking-tight leading-none uppercase">{f.title}</h3>
+              <p className="text-slate-500 font-medium leading-relaxed">{f.desc}</p>
+              
+              <div className="mt-10 w-12 h-1.5 bg-green-100 rounded-full group-hover:w-20 group-hover:bg-green-600 transition-all duration-500"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Decorative Background Elements */}
+      <div className="absolute -top-24 -left-24 w-96 h-96 bg-green-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-slate-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+    </section>
+  );
+};
+
 const ServiceCard = React.memo(({ s }: { s: Service }) => (
   <div className="group relative bg-white rounded-[2.5rem] lg:rounded-[3.5rem] shadow-2xl shadow-slate-200/50 hover-3d transition-all duration-700 border border-slate-100 flex flex-col h-full perspective-1000 overflow-hidden">
     <div className="relative h-64 lg:h-72 overflow-hidden">
@@ -294,6 +373,8 @@ const Home: React.FC = () => {
       />
       <Hero />
       <QuickInquirySection />
+
+      <WhyChooseSection />
       
       <section className="py-24 lg:py-44 relative bg-slate-50/50">
         <div className="container mx-auto px-4">

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import * as ReactRouterDOM from 'react-router-dom';
 const { Link, useLocation } = ReactRouterDOM;
@@ -12,8 +11,45 @@ import {
   ADDRESS, 
   EMAIL_ADDRESS,
   GROUP_NAME,
-  ESTABLISHED_YEAR 
+  ESTABLISHED_YEAR,
+  LOGO_IMAGE 
 } from '../constants';
+
+// Updated Logo component to include the company name text
+const Logo: React.FC<{ light?: boolean; scrolled?: boolean }> = ({ light, scrolled }) => (
+  <div className="flex items-center gap-3 lg:gap-4 group">
+    {/* Logo Image Container */}
+    <div className={`relative transition-all duration-500 group-hover:scale-105 bg-slate-900 rounded-xl overflow-hidden p-1 shadow-2xl ${
+      scrolled ? 'h-10 lg:h-12' : 'h-14 lg:h-16'
+    }`}>
+      <img 
+        src={LOGO_IMAGE} 
+        alt={COMPANY_NAME}
+        className="h-full w-auto object-contain"
+        loading="eager"
+        onError={(e) => {
+          e.currentTarget.src = "https://i.ibb.co/p6V0fR8m/drg-logo.png";
+        }}
+      />
+    </div>
+    
+    {/* Company Name Text */}
+    <div className="flex flex-col justify-center">
+      <div className={`flex items-center gap-1.5 transition-colors duration-500 ${
+        light && !scrolled ? 'text-white' : 'text-slate-950'
+      }`}>
+        <span className="text-lg lg:text-2xl font-black tracking-tighter leading-none">
+          DRG <span className="text-green-600">POWER</span>
+        </span>
+      </div>
+      <span className={`text-[7px] lg:text-[9px] font-black uppercase tracking-[0.25em] leading-none mt-1 transition-colors duration-500 ${
+        light && !scrolled ? 'text-white/60' : 'text-slate-400'
+      }`}>
+        Technology Pvt Ltd
+      </span>
+    </div>
+  </div>
+);
 
 const TopBar: React.FC<{ isScrolled: boolean; isHome: boolean }> = ({ isScrolled, isHome }) => {
   return (
@@ -87,20 +123,8 @@ const Header: React.FC = () => {
         
         <div className={`container mx-auto px-4 md:px-6 transition-all duration-500 ${isScrolled ? 'py-1' : 'py-4'}`}>
           <nav className="flex items-center justify-between" aria-label="Main Navigation">
-            <Link to="/" className="flex flex-col group z-10" aria-label={`${BRAND_NAME} Home`}>
-              <div className="flex items-center gap-3">
-                <div className="bg-green-700 p-2 rounded-xl text-white shadow-lg shadow-green-700/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" aria-hidden="true">
-                  {ICONS.Sun}
-                </div>
-                <div className="flex flex-col">
-                  <span className={`text-2xl font-black tracking-tighter leading-none transition-colors duration-300 ${!isScrolled && isHome && !isOpen ? 'text-white' : 'text-slate-900'}`}>
-                    DRG<span className="text-green-700">POWER</span>
-                  </span>
-                  <span className={`text-[9px] font-black uppercase tracking-[0.2em] transition-colors duration-300 ${!isScrolled && isHome && !isOpen ? 'text-white/60' : 'text-slate-400'}`}>
-                    Technology Pvt Ltd
-                  </span>
-                </div>
-              </div>
+            <Link to="/" className="z-10" aria-label={`${BRAND_NAME} Home`}>
+              <Logo light={isHome} scrolled={isScrolled} />
             </Link>
 
             <div className="hidden lg:flex items-center gap-8">
@@ -192,22 +216,9 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8 mb-24">
           <div className="lg:col-span-4 space-y-10">
-            <Link to="/" className="flex flex-col group" aria-label={`${BRAND_NAME} Home`}>
-              <div className="flex items-center gap-3">
-                <div className="bg-green-700 p-2 rounded-xl text-white shadow-lg group-hover:scale-110 transition-all" aria-hidden="true">
-                  {ICONS.Sun}
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-black tracking-tighter text-white leading-none">
-                    DRG<span className="text-green-700">POWER</span>
-                  </span>
-                  <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-500">
-                    Technology Pvt Ltd
-                  </span>
-                </div>
-              </div>
+            <Link to="/" aria-label={`${BRAND_NAME} Home`}>
+              <Logo light />
             </Link>
-            {/* Added ESTABLISHED_YEAR to imports from constants to fix "Cannot find name 'ESTABLISHED_YEAR'" error */}
             <p className="text-slate-500 leading-relaxed text-base font-medium max-w-sm">
               Delivering high-performance solar solutions since {ESTABLISHED_YEAR}. Trusted partner for residential and commercial energy across India.
             </p>

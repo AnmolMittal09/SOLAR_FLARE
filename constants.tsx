@@ -18,6 +18,12 @@ export const EMAIL_ADDRESS = "drgpower712@gmail.com";
 export const ADDRESS = "Khasra no 253, Gali No 1, Basai Enclave, VPO, Gurugram, HR 122006";
 export const WHATSAPP_LINK = "https://wa.me/919211592425";
 
+/** 
+ * CUSTOM LOGO: 
+ * Updated to the raw GitHub URL for reliable image loading.
+ */
+export const LOGO_IMAGE = "https://raw.githubusercontent.com/AnmolMittal09/DRG-Power/main/logo.png"; 
+
 export const VISION = "Powering a cleaner, greener tomorrow — one rooftop at a time.";
 export const MISSION = "Delivering smart, efficient, and affordable rooftop solar energy solutions that empower our customers and reduce carbon footprints.";
 
