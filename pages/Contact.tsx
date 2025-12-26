@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { PHONE_JATIN, PHONE_DHIRAJ, EMAIL_ADDRESS, ADDRESS, ICONS, BRAND_NAME } from '../constants';
+
+import React, { useState } from 'react';
+import { PHONE_JATIN, PHONE_DHIRAJ, EMAIL_ADDRESS, ADDRESS, BRAND_NAME, WHATSAPP_LINK } from '../constants';
 import { SEO } from '../components/SEO';
 
 const Contact: React.FC = () => {
@@ -20,84 +21,103 @@ const Contact: React.FC = () => {
         window.open(`https://wa.me/919211592425?text=${encodeURIComponent(message)}`, '_blank');
         setShowSuccess(false);
       }, 1500);
-    }, 800);
+    }, 1200);
   };
 
   return (
-    <div className="pt-48 pb-32 bg-white">
+    <div className="bg-white min-h-screen">
       <SEO 
-        title="Project Desk" 
-        description="Connect with DRG Power senior engineers for residential and commercial solar audits."
+        title="Project Command Center" 
+        description="Direct terminal for DRG Power technical audits. Connect with our engineering leads for high-performance solar infrastructure."
       />
-      <div className="container mx-auto px-6">
-        
-        <div className="max-w-5xl mb-32">
-          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-red-50 border border-red-100 mb-10">
-            <span className="flex h-2.5 w-2.5 rounded-full bg-[#BE1E2D] animate-pulse"></span>
-            <span className="text-[11px] font-[900] uppercase tracking-[0.4em] text-[#BE1E2D]">Global Service Standard</span>
+      
+      {/* Hero Header */}
+      <section className="pt-48 pb-20 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(190,30,45,0.15)_0%,transparent_50%)]"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 mb-10">
+              <span className="flex h-2.5 w-2.5 rounded-full bg-[#BE1E2D] animate-pulse"></span>
+              <span className="text-[11px] font-black uppercase tracking-[0.4em] text-white">Project Command Terminal</span>
+            </div>
+            <h1 className="text-6xl md:text-[9rem] font-black text-white leading-[0.8] tracking-tighter mb-8 uppercase italic">
+              SECURE <br />
+              <span className="text-gradient">AUTONOMY.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-400 font-medium max-w-2xl leading-relaxed italic">
+              Initiate your transition to industrial-grade energy independence. Our senior engineering desk is standing by.
+            </p>
           </div>
-          <h1 className="text-6xl md:text-[9.5rem] font-[900] text-black leading-[0.85] tracking-tighter mb-12 uppercase italic">
-            LET'S <span className="text-gradient">CONNECT.</span>
-          </h1>
-          <p className="text-2xl md:text-3xl text-slate-500 font-medium max-w-3xl leading-relaxed italic">
-            Your transition to energy autonomy starts with a single high-fidelity technical audit.
-          </p>
         </div>
+      </section>
 
-        <div className="grid lg:grid-cols-12 gap-20 items-start">
+      <section className="py-24 container mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
           
-          <div className="lg:col-span-5 space-y-16">
+          {/* Left: Strategic Leads & Info */}
+          <div className="lg:col-span-5 space-y-12">
             
-            <div className="grid gap-10">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <a href={`tel:${PHONE_JATIN}`} className="group p-10 bg-slate-900 text-white rounded-sm shadow-3xl hover:bg-black transition-all duration-500 border border-white/5 flex flex-col gap-6">
-                  <div className="w-12 h-12 bg-white text-black rounded-sm flex items-center justify-center shrink-0 shadow-2xl group-hover:rotate-12 transition-transform">
-                    📞
-                  </div>
+            <div className="space-y-6">
+              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#BE1E2D]">Strategic Leads</h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <a href={`tel:${PHONE_JATIN}`} className="group p-8 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-black transition-all duration-500 flex flex-col justify-between h-48 shadow-sm hover:shadow-2xl">
+                  <span className="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all origin-left">📞</span>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Director Desk</p>
-                    <p className="text-lg font-black group-hover:text-[#BE1E2D] transition-colors">{PHONE_JATIN}</p>
+                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Project Director</p>
+                    <p className="text-lg font-black text-slate-900 group-hover:text-white transition-colors">{PHONE_JATIN}</p>
                   </div>
                 </a>
-                <a href={`tel:${PHONE_DHIRAJ}`} className="group p-10 bg-slate-900 text-white rounded-sm shadow-3xl hover:bg-black transition-all duration-500 border border-white/5 flex flex-col gap-6">
-                  <div className="w-12 h-12 bg-white text-black rounded-sm flex items-center justify-center shrink-0 shadow-2xl group-hover:rotate-12 transition-transform">
-                    📞
-                  </div>
+                <a href={`tel:${PHONE_DHIRAJ}`} className="group p-8 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-black transition-all duration-500 flex flex-col justify-between h-48 shadow-sm hover:shadow-2xl">
+                  <span className="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all origin-left">⚙️</span>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">Technical Lead</p>
-                    <p className="text-lg font-black group-hover:text-[#BE1E2D] transition-colors">{PHONE_DHIRAJ}</p>
+                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Technical Ops</p>
+                    <p className="text-lg font-black text-slate-900 group-hover:text-white transition-colors">{PHONE_DHIRAJ}</p>
                   </div>
                 </a>
               </div>
+            </div>
 
-              <a href={`mailto:${EMAIL_ADDRESS}`} className="group p-12 bg-white rounded-sm border border-slate-100 shadow-3xl hover:border-[#BE1E2D]/30 transition-all duration-500 flex items-start gap-10">
-                <div className="w-16 h-16 bg-black text-white rounded-sm flex items-center justify-center shrink-0 shadow-3xl group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                  <span className="text-3xl">✉️</span>
-                </div>
-                <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Corporate Channel</p>
-                  <p className="text-2xl font-black text-black group-hover:text-[#BE1E2D] transition-colors break-all leading-none tracking-tighter uppercase italic">{EMAIL_ADDRESS}</p>
-                  <p className="text-xs font-bold text-slate-400 mt-3 uppercase tracking-widest">Rapid Response Protocol</p>
-                </div>
-              </a>
-
-              <div className="p-12 bg-black text-white rounded-sm shadow-3xl relative overflow-hidden group border border-white/10">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-red-600/10 blur-[100px] rounded-full"></div>
-                <div className="relative z-10 flex items-start gap-10">
-                  <div className="w-16 h-16 bg-white text-black rounded-sm flex items-center justify-center shrink-0 shadow-2xl">
-                    <span className="text-3xl">📍</span>
+            <div className="space-y-6">
+              <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#BE1E2D]">Operational Hub</h2>
+              <div className="space-y-4">
+                <a href={`mailto:${EMAIL_ADDRESS}`} className="block p-10 bg-black text-white rounded-3xl border border-white/5 hover:border-[#BE1E2D]/50 transition-all group shadow-2xl overflow-hidden relative">
+                  <div className="absolute -bottom-10 -right-10 text-9xl font-black text-white/5 italic select-none">MAIL</div>
+                  <div className="relative z-10 flex items-center gap-8">
+                    <div className="w-14 h-14 bg-[#BE1E2D] rounded-xl flex items-center justify-center text-2xl shadow-xl group-hover:rotate-6 transition-transform">✉️</div>
+                    <div>
+                      <p className="text-[9px] font-black uppercase tracking-widest text-white/40 mb-1">Corporate Channel</p>
+                      <p className="text-xl font-black tracking-tight group-hover:text-[#BE1E2D] transition-colors">{EMAIL_ADDRESS}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-white/40 mb-3">Industrial HQ</p>
-                    <address className="text-2xl font-black leading-snug not-italic uppercase tracking-tighter italic">
-                      {ADDRESS}
-                    </address>
+                </a>
+
+                <div className="p-10 bg-slate-50 border border-slate-100 rounded-3xl relative overflow-hidden group shadow-sm">
+                  <div className="flex items-start gap-8">
+                    <div className="w-14 h-14 bg-black text-white rounded-xl flex items-center justify-center text-2xl shadow-xl">📍</div>
+                    <div>
+                      <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">Industrial HQ</p>
+                      <address className="text-xl font-black leading-snug not-italic text-slate-800 uppercase tracking-tighter italic">
+                        {ADDRESS}
+                      </address>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-sm overflow-hidden shadow-3xl border border-slate-100 aspect-square relative group bg-slate-900">
+            {/* Protocol Badge */}
+            <div className="bg-slate-50 p-8 rounded-2xl border-l-4 border-[#BE1E2D] italic">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="w-3 h-3 rounded-full bg-[#BE1E2D] animate-pulse"></span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-slate-900">Standard Response Protocol</span>
+              </div>
+              <p className="text-sm text-slate-500 font-medium leading-relaxed">
+                Technical queries are processed within <span className="text-slate-900 font-bold">120 minutes</span> during operational hours (09:00 - 20:00 IST).
+              </p>
+            </div>
+
+            {/* Map Frame */}
+            <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 aspect-video relative group bg-slate-200">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.828551733224!2d76.97556107528216!3d28.45465717576288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzE2LjgiTiA3Niw1OCc0MS4zIkU!5e0!3m2!1sen!2sin!4v1715870000000!5m2!1sen!2sin" 
                 width="100%" 
@@ -106,116 +126,160 @@ const Contact: React.FC = () => {
                 allowFullScreen={true} 
                 loading="lazy" 
                 title="DRG Power Location Map"
-                className="grayscale contrast-125 group-hover:grayscale-0 transition-all duration-1000 brightness-75 group-hover:brightness-100"
+                className="grayscale contrast-125 group-hover:grayscale-0 transition-all duration-1000 brightness-90 group-hover:brightness-100"
               ></iframe>
+              <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+                <p className="text-[8px] font-black text-white uppercase tracking-widest">Global Deployment Hub</p>
+              </div>
             </div>
           </div>
 
+          {/* Right: Project Intake Terminal */}
           <div className="lg:col-span-7">
-            <div className="bg-white p-16 lg:p-24 rounded-sm shadow-3xl border border-slate-100 sticky top-32">
-              <div className="mb-16">
-                 <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Direct Transmit</span>
-                 <h2 className="text-4xl lg:text-6xl font-black mb-6 tracking-tighter text-black italic uppercase italic leading-none">
-                  Project <span className="text-gradient">Audit.</span>
+            <div className="bg-white p-8 md:p-16 lg:p-20 rounded-[3rem] shadow-2xl border border-slate-100 sticky top-32">
+              <div className="mb-12">
+                 <h2 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter text-black uppercase italic leading-none">
+                  Project <span className="text-[#BE1E2D]">Intake.</span>
                 </h2>
-                <p className="text-xl text-slate-500 font-medium italic">High-fidelity data analysis for your facility's energy future.</p>
+                <p className="text-lg text-slate-500 font-medium italic">Define your energy targets to receive a custom technical proposal.</p>
               </div>
 
               {showSuccess ? (
-                <div className="py-24 text-center animate-in fade-in zoom-in duration-500">
-                  <div className="w-32 h-32 bg-red-50 text-[#BE1E2D] rounded-full flex items-center justify-center mx-auto mb-10 text-5xl shadow-inner border border-red-100">
-                    ✓
-                  </div>
-                  <h3 className="text-4xl font-black text-black mb-6 uppercase tracking-tighter italic">Transmission Received</h3>
-                  <p className="text-xl text-slate-500 font-medium italic">Establishing priority connection with the project desk...</p>
+                <div className="py-20 text-center animate-in fade-in zoom-in duration-500">
+                  <div className="w-24 h-24 bg-red-50 text-[#BE1E2D] rounded-full flex items-center justify-center mx-auto mb-8 text-4xl shadow-inner border border-red-100">✓</div>
+                  <h3 className="text-3xl font-black text-black mb-4 uppercase tracking-tighter italic">Signal Transmitted</h3>
+                  <p className="text-lg text-slate-500 font-medium italic">Connecting with project desk...</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-10">
-                  <div className="grid md:grid-cols-2 gap-10">
-                    <div className="space-y-3">
-                      <label htmlFor="name" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Full Identity</label>
+                <form onSubmit={handleSubmit} className="space-y-10 group/form">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-2 group">
+                      <label htmlFor="name" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Identity</label>
                       <input
                         id="name"
                         required
                         type="text"
-                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg"
-                        placeholder="Project Lead Name"
+                        autoComplete="name"
+                        className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-5 py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-lg invalid:border-red-500/50"
+                        placeholder="Lead Name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                       />
                     </div>
-                    <div className="space-y-3">
-                      <label htmlFor="phone" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Secure Contact</label>
+                    <div className="space-y-2 group">
+                      <label htmlFor="phone" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Terminal</label>
                       <input
                         id="phone"
                         required
                         type="tel"
-                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg"
-                        placeholder="Phone Terminal"
+                        pattern="[0-9+ ]{10,15}"
+                        autoComplete="tel"
+                        className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-5 py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-lg invalid:border-red-500/50"
+                        placeholder="+91 Phone"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       />
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-10">
-                    <div className="space-y-3">
-                      <label htmlFor="city" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Deployment Location</label>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-2 group">
+                      <label htmlFor="city" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Location</label>
                       <input
                         id="city"
                         required
                         type="text"
-                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg"
-                        placeholder="Area / City"
+                        className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-5 py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-lg invalid:border-red-500/50"
+                        placeholder="City / Region"
                         value={formData.city}
                         onChange={(e) => setFormData({...formData, city: e.target.value})}
                       />
                     </div>
-                    <div className="space-y-3">
-                      <label htmlFor="requirement" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Segment</label>
-                      <select 
-                        id="requirement"
-                        className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg cursor-pointer appearance-none"
-                        value={formData.requirement}
-                        onChange={(e) => setFormData({...formData, requirement: e.target.value})}
-                      >
-                        <option value="Residential">Residential Array</option>
-                        <option value="Commercial">Commercial Grid</option>
-                        <option value="Industrial">Industrial Plant</option>
-                        <option value="AMC/Service">Maintenance Loop</option>
-                      </select>
+                    <div className="space-y-2 group">
+                      <label htmlFor="requirement" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Domain</label>
+                      <div className="relative">
+                        <select 
+                          id="requirement"
+                          className="w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-5 py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-lg cursor-pointer appearance-none"
+                          value={formData.requirement}
+                          onChange={(e) => setFormData({...formData, requirement: e.target.value})}
+                        >
+                          <option value="Residential">Residential Asset</option>
+                          <option value="Commercial">Commercial Grid</option>
+                          <option value="Industrial">Industrial Plant</option>
+                          <option value="Society">Housing Society</option>
+                        </select>
+                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#BE1E2D]">▼</div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <label htmlFor="message" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1">Project Particulars</label>
+                  <div className="space-y-2 group">
+                    <label htmlFor="message" className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Project Particulars</label>
                     <textarea
                       id="message"
                       rows={4}
-                      className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-5 text-black font-[900] outline-none focus:border-[#BE1E2D] transition-all uppercase tracking-tighter text-lg resize-none"
-                      placeholder="Load specs or energy targets..."
+                      className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-5 py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-lg resize-none invalid:border-red-500/50"
+                      placeholder="e.g., Monthly consumption units or plant size target..."
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                     ></textarea>
                   </div>
 
-                  <div className="pt-8">
+                  <div className="pt-6 relative">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`w-full py-8 rounded-sm text-white font-[900] text-2xl shadow-3xl transition-all active:scale-[0.98] flex items-center justify-center gap-6 uppercase tracking-[0.4em] ${
-                        isSubmitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-black hover:bg-[#BE1E2D] shadow-red-900/10'
+                      className={`relative w-full py-6 rounded-2xl text-white font-black text-xl shadow-2xl transition-all duration-200 uppercase tracking-[0.4em] overflow-hidden ${
+                        isSubmitting 
+                          ? 'bg-slate-400 cursor-not-allowed scale-[0.98]' 
+                          : 'bg-black hover:bg-[#BE1E2D] active:scale-95 active:bg-[#8b1520] active:shadow-inner active:shadow-black/40 hover:shadow-red-900/20'
                       }`}
                     >
-                      TRANSMIT DATA
+                      {isSubmitting && (
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-[shimmer_2s_infinite] -translate-x-full" />
+                      )}
+                      <span className="relative z-10 flex items-center justify-center gap-6">
+                        {isSubmitting ? 'Uplinking...' : 'Transmit Data'}
+                        {!isSubmitting && <span className="text-2xl group-hover/form:translate-x-2 transition-transform duration-300">→</span>}
+                      </span>
                     </button>
+                    <p className="text-[8px] text-center text-slate-400 mt-6 font-bold uppercase tracking-widest">By transmitting, you initiate a secure project evaluation protocol.</p>
                   </div>
                 </form>
               )}
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Trust Footer Section */}
+      <section className="bg-slate-50 py-24 border-t border-slate-100">
+        <div className="container mx-auto px-6 text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 opacity-50">
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-4">🛡️</span>
+              <p className="text-[9px] font-black uppercase tracking-[0.4em]">Secure Audits</p>
+            </div>
+            <div className="h-px w-20 bg-slate-200 hidden md:block"></div>
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-4">⚙️</span>
+              <p className="text-[9px] font-black uppercase tracking-[0.4em]">Expert Engineering</p>
+            </div>
+            <div className="h-px w-20 bg-slate-200 hidden md:block"></div>
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-4">🤝</span>
+              <p className="text-[9px] font-black uppercase tracking-[0.4em]">Group Integrity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>{`
+        @keyframes shimmer {
+          100% { transform: translateX(100%); }
+        }
+      `}</style>
     </div>
   );
 };

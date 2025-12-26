@@ -15,30 +15,20 @@ import {
 } from '../constants';
 
 const Logo: React.FC<{ footer?: boolean }> = ({ footer }) => {
-  const [imgError, setImgError] = useState(false);
-
   return (
     <div className="flex items-center group cursor-pointer">
-      <div className={`relative transition-all duration-500 transform group-hover:scale-105 flex items-center justify-center ${
+      <div className={`relative transition-all duration-500 transform group-hover:scale-110 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 p-1 ${
         footer ? 'h-16 w-16' : 'h-14 w-14'
       }`}>
-        <div className="relative w-full h-full flex items-center justify-center">
-          {!imgError ? (
-            <img 
-              src={LOGO_IMAGE} 
-              alt="DRG Power Logo" 
-              className="w-full h-full object-contain filter drop-shadow-xl brightness-110"
-              style={{ minWidth: footer ? '56px' : '48px', minHeight: footer ? '56px' : '48px' }}
-              onError={() => setImgError(true)}
-            />
-          ) : (
-            <div className="w-10 h-10 bg-[#BE1E2D] rounded-lg flex items-center justify-center shadow-lg border border-white/20">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-              </svg>
-            </div>
-          )}
-        </div>
+        {/* Brand Image Logo */}
+        <img 
+          src={LOGO_IMAGE} 
+          alt={`${BRAND_NAME} Logo`}
+          className="w-full h-full object-contain filter brightness-110 group-hover:brightness-125 transition-all"
+          style={{ imageRendering: 'auto' }}
+        />
+        {/* Ambient Glow */}
+        <div className="absolute inset-0 bg-[#BE1E2D]/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
       </div>
       <div className="ml-4 flex flex-col justify-center border-l border-white/20 pl-4">
         <div className="flex flex-col">
