@@ -151,77 +151,61 @@ const Header: React.FC = () => {
 const Footer: React.FC = () => (
   <footer className="bg-black text-white pt-24 pb-8 font-sans border-t border-white/5">
     <div className="container mx-auto px-6 lg:px-12">
-      <div className="grid lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-24">
         
-        {/* Brand Column */}
-        <div className="space-y-6">
+        {/* Column 1: Identity */}
+        <div className="space-y-8">
           <Logo footer />
-          <p className="text-slate-500 text-sm leading-relaxed max-w-xs mt-6 italic">
-            Industrial grade solar solutions for the next generation of infrastructure. High precision, zero compromise.
+          <p className="text-slate-500 text-sm leading-relaxed max-w-xs italic">
+            Delivering high-performance solar infrastructure for residential and commercial assets. Built for longevity and yield.
           </p>
-          <div className="flex gap-4 pt-4">
-            <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg hover:border-[#BE1E2D] transition-colors" aria-label="LinkedIn">
+          <div className="flex gap-4">
+            <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg hover:border-[#BE1E2D] hover:text-[#BE1E2D] transition-all" aria-label="LinkedIn">
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg hover:border-[#BE1E2D] transition-colors" aria-label="Facebook">
+            <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-lg hover:border-[#BE1E2D] hover:text-[#BE1E2D] transition-all" aria-label="Facebook">
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
             </a>
           </div>
         </div>
 
-        {/* Solutions Column */}
-        <div className="space-y-6">
-          <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white">Solutions</h3>
-          <ul className="space-y-4">
-            <li><Link to="/services" className="text-sm font-semibold text-slate-500 hover:text-white transition-colors">Residential Units</Link></li>
-            <li><Link to="/services" className="text-sm font-semibold text-slate-500 hover:text-white transition-colors">Industrial Solar</Link></li>
-            <li><Link to="/services" className="text-sm font-semibold text-slate-500 hover:text-white transition-colors">Grid Management</Link></li>
-            <li><Link to="/services" className="text-sm font-semibold text-slate-500 hover:text-white transition-colors">O&M Contracts</Link></li>
+        {/* Column 2: Quick Links */}
+        <div className="space-y-8">
+          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Navigation</h3>
+          <ul className="space-y-5">
+            <li><Link to="/" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Home</Link></li>
+            <li><Link to="/about" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">About</Link></li>
+            <li><Link to="/services" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Services</Link></li>
+            <li><Link to="/how-it-works" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">How It Works</Link></li>
           </ul>
         </div>
 
-        {/* HQ Info Column */}
-        <div className="space-y-6">
-          <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white">HQ Info</h3>
-          <div className="space-y-6">
-            <div className="flex gap-4 items-start">
-              <div className="mt-1 text-[#BE1E2D]">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              </div>
-              <p className="text-sm text-slate-500 leading-snug italic">{ADDRESS}</p>
-            </div>
-            <div className="flex gap-4 items-center">
-              <div className="text-[#BE1E2D]">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              </div>
-              <p className="text-lg font-black tracking-tighter">{PHONE_PRIMARY}</p>
-            </div>
-            <div className="flex gap-4 items-center">
-              <div className="text-[#BE1E2D]">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </div>
-              <p className="text-sm text-slate-500 font-semibold italic">{EMAIL_ADDRESS}</p>
-            </div>
-          </div>
+        {/* Column 3: Resources */}
+        <div className="space-y-8">
+          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Resources</h3>
+          <ul className="space-y-5">
+            <li><Link to="/projects" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Projects</Link></li>
+            <li><Link to="/faq" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">FAQ</Link></li>
+            <li><a href="#" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Privacy Policy</a></li>
+            <li><a href="#" className="text-sm font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Safety Loop</a></li>
+          </ul>
         </div>
 
-        {/* Direct Connect Column */}
-        <div className="space-y-6">
-          <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white">Direct Connect</h3>
-          <div className="space-y-4">
-            <div className="bg-[#0A0A0A] p-5 rounded-2xl border border-white/5 flex flex-col gap-1">
-              <span className="text-[9px] font-black uppercase tracking-widest text-[#BE1E2D]">Jatin Batheja</span>
-              <div className="flex items-center gap-3">
-                <svg className="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                <span className="text-lg font-black tracking-tight">{PHONE_JATIN}</span>
-              </div>
+        {/* Column 4: Contact */}
+        <div className="space-y-8">
+          <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Direct Connect</h3>
+          <div className="space-y-6">
+            <div className="flex flex-col gap-2">
+              <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#BE1E2D]">Head of Projects</span>
+              <a href={`tel:${PHONE_JATIN}`} className="text-xl font-black tracking-tighter text-white hover:text-[#BE1E2D] transition-colors">{PHONE_JATIN}</a>
             </div>
-            <div className="bg-[#0A0A0A] p-5 rounded-2xl border border-white/5 flex flex-col gap-1">
-              <span className="text-[9px] font-black uppercase tracking-widest text-[#BE1E2D]">Dhiraj Sanduja</span>
-              <div className="flex items-center gap-3">
-                <svg className="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                <span className="text-lg font-black tracking-tight">{PHONE_DHIRAJ}</span>
-              </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[#BE1E2D]">Technical Operations</span>
+              <a href={`tel:${PHONE_DHIRAJ}`} className="text-xl font-black tracking-tighter text-white hover:text-[#BE1E2D] transition-colors">{PHONE_DHIRAJ}</a>
+            </div>
+            <div className="pt-2 border-t border-white/10 mt-4">
+              <a href={`mailto:${EMAIL_ADDRESS}`} className="text-xs font-bold text-slate-500 hover:text-white transition-colors block mb-4 italic break-all">{EMAIL_ADDRESS}</a>
+              <p className="text-[10px] text-slate-600 leading-relaxed italic">{ADDRESS}</p>
             </div>
           </div>
         </div>
@@ -230,12 +214,12 @@ const Footer: React.FC = () => (
 
       {/* Bottom Bar */}
       <div className="flex flex-col items-center gap-6 pt-12 border-t border-white/5 text-center">
-        <p className="text-[9px] font-black uppercase tracking-[0.4em] text-white/30">
-          © 2024 DRG POWER TECHNOLOGY PRIVATE LIMITED. BUILT FOR POWER.
+        <p className="text-[9px] font-black uppercase tracking-[0.4em] text-white/20">
+          © 2024 DRG POWER TECHNOLOGY PRIVATE LIMITED. ENGINEERING THE FUTURE.
         </p>
-        <div className="flex gap-10 text-[9px] font-black uppercase tracking-[0.4em] text-white/40">
-          <a href="#" className="hover:text-white transition-colors">Privacy</a>
-          <a href="#" className="hover:text-white transition-colors">Systems</a>
+        <div className="flex gap-10 text-[9px] font-black uppercase tracking-[0.4em] text-white/30">
+          <a href="#" className="hover:text-white transition-colors">Compliance</a>
+          <a href="#" className="hover:text-white transition-colors">Grid Health</a>
           <a href="#" className="hover:text-white transition-colors">Security</a>
         </div>
       </div>
