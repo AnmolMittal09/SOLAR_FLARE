@@ -21,7 +21,7 @@ export const WHATSAPP_LINK = "https://wa.me/919211592425";
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/rsmXnAT8ZN6qRCdy9";
 
 // Official Brand Logo URL
-export const LOGO_IMAGE = "https://raw.githubusercontent.com/AnmolMittal09/DRG-Power/main/logo%20(2).png"; 
+export const LOGO_IMAGE = "https://raw.githubusercontent.com/AnmolMittal09/DRG-Power/main/Untitled%20design%20%282%29.png"; 
 
 export const VISION = "Powering a cleaner, greener tomorrow — one rooftop at a time.";
 export const MISSION = "Delivering smart, efficient, and affordable rooftop solar energy solutions that empower our customers and reduce carbon footprints.";

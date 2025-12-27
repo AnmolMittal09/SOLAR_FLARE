@@ -33,9 +33,9 @@ const Logo: React.FC<{ footer?: boolean }> = ({ footer }) => {
       <div className="ml-3 md:ml-4 flex flex-col justify-center border-l border-white/20 pl-3 md:pl-4">
         <div className="flex flex-col">
           <span className="text-lg md:text-xl font-black tracking-tighter leading-none text-white uppercase">
-            DRG <span className={`${footer ? 'text-white' : 'text-[#BE1E2D]'}`}>POWER</span>
+            DRG <span className="text-[#BE1E2D]">POWER</span>
           </span>
-          {!footer && <span className="text-[6px] md:text-[7px] font-black uppercase tracking-[0.4em] text-white/60 leading-none mt-1 md:mt-1.5">Technology</span>}
+          <span className="text-[6px] md:text-[7px] font-black uppercase tracking-[0.4em] text-white/60 leading-none mt-1 md:mt-1.5">Technology</span>
         </div>
       </div>
     </div>
