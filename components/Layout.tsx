@@ -30,7 +30,7 @@ const Logo: React.FC<{ footer?: boolean }> = ({ footer }) => {
       </div>
       <div className="ml-3 md:ml-4 flex flex-col justify-center border-l-2 border-white/10 pl-4 md:pl-5">
         <div className="flex flex-col">
-          <span className="text-xl md:text-2xl lg:text-3xl font-black tracking-tighter leading-none uppercase">
+          <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tighter leading-none uppercase">
             <span className="text-[#BE1E2D]">SOLAR</span> <span className="text-[#FF8A00]">FLARE</span>
           </span>
         </div>
@@ -219,7 +219,7 @@ const Footer: React.FC = () => (
 
       <div className="flex flex-col items-center gap-4 md:gap-6 pt-10 md:pt-12 border-t border-white/5 text-center">
         <p className="text-[7px] md:text-[9px] font-black uppercase tracking-[0.4em] text-white/20 px-4">
-          © 2024 {COMPANY_NAME} FLARING THE FUTURE.
+          © 2002 {COMPANY_NAME} FLARING THE FUTURE.
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:gap-10 text-[7px] md:text-[9px] font-black uppercase tracking-[0.4em] text-white/30 px-4">
           <a href="#" className="hover:text-[#FF8A00] transition-colors">Compliance</a>

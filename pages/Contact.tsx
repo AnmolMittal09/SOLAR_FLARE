@@ -25,10 +25,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-[#050505] min-h-screen text-white">
       <SEO 
         title="Project Command Center" 
-        description="Direct terminal for DRG Power technical audits. Connect with our engineering leads for high-performance solar infrastructure."
+        description="Direct terminal for Solar Flare technical audits. Connect with our engineering leads for high-performance solar infrastructure."
       />
       
       <section className="pt-56 md:pt-64 lg:pt-80 pb-16 md:pb-24 container mx-auto px-4 md:px-6">
@@ -38,33 +38,33 @@ const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-10 md:space-y-12">
             <div className="text-center lg:text-left">
               <h2 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.5em] text-[#BE1E2D] mb-3 md:mb-4">Direct Contact</h2>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-black tracking-tighter uppercase italic leading-none">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tighter uppercase italic leading-none">
                 Connect With <br className="hidden sm:block" /> <span className="text-[#BE1E2D]">Our Team.</span>
               </h1>
             </div>
             
             <div className="space-y-6">
-              <h2 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.5em] text-slate-400 text-center lg:text-left">Strategic Leads</h2>
+              <h2 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.5em] text-slate-500 text-center lg:text-left">Strategic Leads</h2>
               <div className="grid sm:grid-cols-2 gap-4">
-                <a href={`tel:+91${PHONE_JATIN}`} className="group p-6 md:p-8 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-black transition-all duration-500 flex flex-col justify-between h-40 md:h-48 shadow-sm hover:shadow-2xl">
+                <a href={`tel:+91${PHONE_JATIN}`} className="group p-6 md:p-8 bg-[#0a0a0a] border border-white/5 rounded-2xl hover:bg-black transition-all duration-500 flex flex-col justify-between h-40 md:h-48 shadow-sm hover:shadow-2xl">
                   <span className="text-xl md:text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all origin-left">📞</span>
                   <div>
-                    <p className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Project Director</p>
-                    <p className="text-base md:text-lg font-black text-slate-900 group-hover:text-white transition-colors">{PHONE_JATIN}</p>
+                    <p className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">Project Director</p>
+                    <p className="text-base md:text-lg font-black text-white transition-colors">{PHONE_JATIN}</p>
                   </div>
                 </a>
-                <a href={`tel:+91${PHONE_DHIRAJ}`} className="group p-6 md:p-8 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-black transition-all duration-500 flex flex-col justify-between h-40 md:h-48 shadow-sm hover:shadow-2xl">
+                <a href={`tel:+91${PHONE_DHIRAJ}`} className="group p-6 md:p-8 bg-[#0a0a0a] border border-white/5 rounded-2xl hover:bg-black transition-all duration-500 flex flex-col justify-between h-40 md:h-48 shadow-sm hover:shadow-2xl">
                   <span className="text-xl md:text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all origin-left">⚙️</span>
                   <div>
-                    <p className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Technical Ops</p>
-                    <p className="text-base md:text-lg font-black text-slate-900 group-hover:text-white transition-colors">{PHONE_DHIRAJ}</p>
+                    <p className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">Technical Ops</p>
+                    <p className="text-base md:text-lg font-black text-white transition-colors">{PHONE_DHIRAJ}</p>
                   </div>
                 </a>
               </div>
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.5em] text-slate-400 text-center lg:text-left">Operational Hub</h2>
+              <h2 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.5em] text-slate-500 text-center lg:text-left">Operational Hub</h2>
               <div className="space-y-4">
                 <a href={`mailto:${EMAIL_ADDRESS}`} className="block p-6 md:p-10 bg-black text-white rounded-[2rem] border border-white/5 hover:border-[#BE1E2D]/50 transition-all group shadow-2xl overflow-hidden relative">
                   <div className="absolute -bottom-6 -right-6 text-6xl md:text-9xl font-black text-white/5 italic select-none pointer-events-none">MAIL</div>
@@ -77,12 +77,12 @@ const Contact: React.FC = () => {
                   </div>
                 </a>
 
-                <div className="p-6 md:p-10 bg-slate-50 border border-slate-100 rounded-[2rem] relative overflow-hidden group shadow-sm">
+                <div className="p-6 md:p-10 bg-[#0a0a0a] border border-white/5 rounded-[2rem] relative overflow-hidden group shadow-sm">
                   <div className="flex items-start gap-6 md:gap-8">
-                    <div className="w-10 h-10 md:w-14 md:h-14 bg-black text-white rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-xl shrink-0">📍</div>
+                    <div className="w-10 h-10 md:w-14 md:h-14 bg-white text-black rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-xl shrink-0">📍</div>
                     <div>
-                      <p className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">Industrial HQ</p>
-                      <address className="text-sm md:text-xl font-black leading-snug not-italic text-slate-800 uppercase tracking-tighter italic">
+                      <p className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-500 mb-2">Industrial HQ</p>
+                      <address className="text-sm md:text-xl font-black leading-snug not-italic text-white uppercase tracking-tighter italic">
                         {ADDRESS}
                       </address>
                     </div>
@@ -92,18 +92,18 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Protocol Badge */}
-            <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border-l-4 border-[#BE1E2D] italic">
+            <div className="bg-[#0a0a0a] p-6 md:p-8 rounded-2xl border-l-4 border-[#BE1E2D] italic shadow-lg">
               <div className="flex items-center gap-3 md:gap-4 mb-3">
                 <span className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-[#BE1E2D] animate-pulse"></span>
-                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-900">Standard Response Protocol</span>
+                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white">Standard Response Protocol</span>
               </div>
-              <p className="text-xs md:text-sm text-slate-500 font-medium leading-relaxed">
-                Technical queries are processed within <span className="text-slate-900 font-bold">120 minutes</span> during operational hours (09:00 - 20:00 IST).
+              <p className="text-xs md:text-sm text-slate-400 font-medium leading-relaxed">
+                Technical queries are processed within <span className="text-white font-bold">120 minutes</span> during operational hours (09:00 - 20:00 IST).
               </p>
             </div>
 
             {/* Map Frame */}
-            <div className="rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 aspect-video relative group bg-slate-200">
+            <div className="rounded-[2rem] overflow-hidden shadow-2xl border border-white/5 aspect-video relative group bg-[#111]">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.838612185523!2d76.9754911762194!3d28.45435427576295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d176709f6974b%3A0xc3e13d5b00109927!2sDRG%20Power%20Technology%20Private%20Limited!5e0!3m2!1sen!2sin!4v1739989000000!5m2!1sen!2sin" 
                 width="100%" 
@@ -111,8 +111,8 @@ const Contact: React.FC = () => {
                 style={{ border: 0 }} 
                 allowFullScreen={true} 
                 loading="lazy" 
-                title="DRG Power Location Map"
-                className="grayscale contrast-125 group-hover:grayscale-0 transition-all duration-1000 brightness-90 group-hover:brightness-100"
+                title="Solar Flare Location Map"
+                className="grayscale contrast-125 group-hover:grayscale-0 transition-all duration-1000 brightness-50 group-hover:brightness-100"
               ></iframe>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/20 pointer-events-none">
                 <a 
@@ -132,9 +132,9 @@ const Contact: React.FC = () => {
 
           {/* Right: Project Intake Terminal */}
           <div className="lg:col-span-7">
-            <div className="bg-white p-8 sm:p-12 md:p-16 lg:p-20 rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-slate-100 lg:sticky lg:top-32 transition-all">
+            <div className="bg-[#0a0a0a] p-8 sm:p-12 md:p-16 lg:p-20 rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white/5 lg:sticky lg:top-32 transition-all">
               <div className="mb-8 md:mb-12 text-center lg:text-left">
-                 <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-3 md:mb-4 tracking-tighter text-black uppercase italic leading-none">
+                 <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-3 md:mb-4 tracking-tighter text-white uppercase italic leading-none">
                   Project <span className="text-[#BE1E2D]">Intake.</span>
                 </h2>
                 <p className="text-base md:text-lg text-slate-500 font-medium italic">Define your energy targets to receive a custom technical proposal.</p>
@@ -142,35 +142,35 @@ const Contact: React.FC = () => {
 
               {showSuccess ? (
                 <div className="py-12 md:py-20 text-center animate-in fade-in zoom-in duration-500">
-                  <div className="w-16 h-16 md:w-24 md:h-24 bg-red-50 text-[#BE1E2D] rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 text-2xl md:text-4xl shadow-inner border border-red-100">✓</div>
-                  <h3 className="text-2xl md:text-3xl font-black text-black mb-3 md:mb-4 uppercase tracking-tighter italic">Signal Transmitted</h3>
+                  <div className="w-16 h-16 md:w-24 md:h-24 bg-red-900/20 text-[#BE1E2D] rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 text-2xl md:text-4xl shadow-inner border border-red-900/30">✓</div>
+                  <h3 className="text-2xl md:text-3xl font-black text-white mb-3 md:mb-4 uppercase tracking-tighter italic">Signal Transmitted</h3>
                   <p className="text-base md:text-lg text-slate-500 font-medium italic">Connecting with project desk...</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6 md:space-y-10 group/form">
                   <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                     <div className="space-y-1.5 md:space-y-2 group">
-                      <label htmlFor="name" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Identity</label>
+                      <label htmlFor="name" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-600 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Identity</label>
                       <input
                         id="name"
                         required
                         type="text"
                         autoComplete="name"
-                        className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg invalid:border-red-500/50"
+                        className="peer w-full bg-[#111] border-b-2 border-white/5 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-white font-black outline-none focus:border-[#BE1E2D] focus:bg-[#1a1a1a] focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg invalid:border-red-900/50"
                         placeholder="Lead Name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                       />
                     </div>
                     <div className="space-y-1.5 md:space-y-2 group">
-                      <label htmlFor="phone" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Terminal</label>
+                      <label htmlFor="phone" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-600 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Terminal</label>
                       <input
                         id="phone"
                         required
                         type="tel"
                         pattern="[0-9+ ]{10,15}"
                         autoComplete="tel"
-                        className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg invalid:border-red-500/50"
+                        className="peer w-full bg-[#111] border-b-2 border-white/5 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-white font-black outline-none focus:border-[#BE1E2D] focus:bg-[#1a1a1a] focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg invalid:border-red-900/50"
                         placeholder="+91 Phone"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -180,23 +180,23 @@ const Contact: React.FC = () => {
 
                   <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                     <div className="space-y-1.5 md:space-y-2 group">
-                      <label htmlFor="city" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Location</label>
+                      <label htmlFor="city" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-600 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Location</label>
                       <input
                         id="city"
                         required
                         type="text"
-                        className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg invalid:border-red-500/50"
+                        className="peer w-full bg-[#111] border-b-2 border-white/5 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-white font-black outline-none focus:border-[#BE1E2D] focus:bg-[#1a1a1a] focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg invalid:border-red-900/50"
                         placeholder="City / Region"
                         value={formData.city}
                         onChange={(e) => setFormData({...formData, city: e.target.value})}
                       />
                     </div>
                     <div className="space-y-1.5 md:space-y-2 group">
-                      <label htmlFor="requirement" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Domain</label>
+                      <label htmlFor="requirement" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-600 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Domain</label>
                       <div className="relative">
                         <select 
                           id="requirement"
-                          className="w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg cursor-pointer appearance-none"
+                          className="w-full bg-[#111] border-b-2 border-white/5 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-white font-black outline-none focus:border-[#BE1E2D] focus:bg-[#1a1a1a] focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg cursor-pointer appearance-none"
                           value={formData.requirement}
                           onChange={(e) => setFormData({...formData, requirement: e.target.value})}
                         >
@@ -211,11 +211,11 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="space-y-1.5 md:space-y-2 group">
-                    <label htmlFor="message" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Project Particulars</label>
+                    <label htmlFor="message" className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-slate-600 ml-1 transition-colors group-focus-within:text-[#BE1E2D]">Project Particulars</label>
                     <textarea
                       id="message"
                       rows={4}
-                      className="peer w-full bg-slate-50 border-b-2 border-slate-100 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-black font-black outline-none focus:border-[#BE1E2D] focus:bg-white focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg resize-none invalid:border-red-500/50"
+                      className="peer w-full bg-[#111] border-b-2 border-white/5 rounded-t-xl px-4 md:px-5 py-3 md:py-5 text-white font-black outline-none focus:border-[#BE1E2D] focus:bg-[#1a1a1a] focus:ring-4 focus:ring-[#BE1E2D]/5 transition-all uppercase tracking-tighter text-base md:text-lg resize-none invalid:border-red-900/50"
                       placeholder="e.g., Monthly consumption units or plant size target..."
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
@@ -226,21 +226,21 @@ const Contact: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`relative w-full py-4 md:py-6 rounded-2xl text-white font-black text-lg md:text-xl shadow-2xl transition-all duration-200 uppercase tracking-[0.2em] md:tracking-[0.4em] overflow-hidden ${
+                      className={`relative w-full py-5 md:py-8 rounded-[2.5rem] font-[1000] text-xl md:text-2xl shadow-[0_25px_60px_rgba(190,30,45,0.35)] transition-all duration-500 uppercase tracking-[0.3em] md:tracking-[0.5em] overflow-hidden group/btn ${
                         isSubmitting 
-                          ? 'bg-slate-400 cursor-not-allowed scale-[0.98]' 
-                          : 'bg-black hover:bg-[#BE1E2D] active:scale-95 active:bg-[#8b1520] active:shadow-inner active:shadow-black/40 hover:shadow-red-900/20'
+                          ? 'bg-slate-800 text-slate-500 cursor-not-allowed scale-[0.98]' 
+                          : 'bg-[#BE1E2D] text-white hover:bg-[#FF8A00] hover:shadow-[0_25px_80px_rgba(255,138,0,0.5)] hover:-translate-y-1.5 active:scale-95'
                       }`}
                     >
                       {isSubmitting && (
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-[shimmer_2s_infinite] -translate-x-full" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite] -translate-x-full" />
                       )}
-                      <span className="relative z-10 flex items-center justify-center gap-4 md:gap-6">
-                        {isSubmitting ? 'Uplinking...' : 'Transmit Data'}
-                        {!isSubmitting && <span className="text-xl md:text-2xl group-hover/form:translate-x-2 transition-transform duration-300">→</span>}
+                      <span className="relative z-10 flex items-center justify-center gap-4 md:gap-8">
+                        {isSubmitting ? 'Uplinking...' : 'Submit Request'}
+                        {!isSubmitting && <span className="text-2xl md:text-4xl group-hover/btn:translate-x-3 transition-transform duration-500">→</span>}
                       </span>
                     </button>
-                    <p className="text-[7px] md:text-[8px] text-center text-slate-400 mt-4 md:mt-6 font-bold uppercase tracking-widest px-2">By transmitting, you initiate a secure project evaluation protocol.</p>
+                    <p className="text-[7px] md:text-[9px] text-center text-slate-600 mt-6 md:mt-8 font-black uppercase tracking-[0.4em] px-2 opacity-60">Technical Signal Initialization Protocol Alpha-01</p>
                   </div>
                 </form>
               )}
@@ -250,19 +250,19 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Trust Footer Section */}
-      <section className="bg-slate-50 py-16 md:py-24 border-t border-slate-100">
+      <section className="bg-black py-16 md:py-24 border-t border-white/5">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 opacity-50">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 opacity-30 hover:opacity-100 transition-opacity duration-700">
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl mb-3 md:mb-4">🛡️</span>
               <p className="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em]">Secure Audits</p>
             </div>
-            <div className="h-px w-12 md:w-20 bg-slate-200 hidden md:block"></div>
+            <div className="h-px w-12 md:w-20 bg-white/10 hidden md:block"></div>
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl mb-3 md:mb-4">⚙️</span>
               <p className="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em]">Expert Engineering</p>
             </div>
-            <div className="h-px w-12 md:w-20 bg-slate-200 hidden md:block"></div>
+            <div className="h-px w-12 md:w-20 bg-white/10 hidden md:block"></div>
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl mb-3 md:mb-4">🤝</span>
               <p className="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em]">Group Integrity</p>

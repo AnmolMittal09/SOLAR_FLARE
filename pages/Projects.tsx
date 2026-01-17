@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import * as ReactRouterDOM from 'react-router-dom';
 const { Link } = ReactRouterDOM;
@@ -22,15 +23,15 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <div className="pt-48 pb-32 bg-slate-50/30 min-h-screen">
+    <div className="pt-48 pb-32 bg-[#050505] min-h-screen">
       <SEO 
         title="Project Portfolio" 
-        description="Explore DRG Power's high-yield solar installation portfolio across India's industrial corridors."
+        description="Explore Solar Flare's high-yield solar installation portfolio across India's industrial corridors."
       />
       <div className="container mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto mb-24">
           <span className="text-[#BE1E2D] font-black uppercase tracking-[0.6em] text-[10px] mb-8 block">Legacy Projects</span>
-          <h1 className="text-6xl md:text-[8rem] font-black tracking-tighter mb-10 italic uppercase italic leading-none">PROVEN <span className="text-gradient">YIELD.</span></h1>
+          <h1 className="text-6xl md:text-[8rem] font-black tracking-tighter mb-10 italic uppercase italic leading-none text-white">PROVEN <span className="text-gradient">YIELD.</span></h1>
           <p className="text-2xl text-slate-500 font-medium italic">High-performance installations across residential complexes and manufacturing hubs.</p>
         </div>
 
@@ -41,8 +42,8 @@ const Projects: React.FC = () => {
               onClick={() => setFilter(cat)}
               className={`px-10 py-4 rounded-sm font-black text-[11px] uppercase tracking-[0.4em] transition-all duration-500 ${
                 filter === cat 
-                  ? 'bg-black text-white shadow-3xl scale-105 border-b-2 border-[#BE1E2D]' 
-                  : 'bg-white text-slate-400 hover:text-black hover:bg-slate-50 border border-slate-200'
+                  ? 'bg-white text-black shadow-3xl scale-105 border-b-2 border-[#BE1E2D]' 
+                  : 'bg-[#111] text-slate-500 hover:text-white hover:bg-[#1a1a1a] border border-white/5'
               }`}
             >
               {cat}
@@ -52,7 +53,7 @@ const Projects: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-48">
           {filteredProjects.map((p) => (
-            <article key={p.id} className="group relative rounded-sm overflow-hidden shadow-2xl h-[550px] border border-slate-100 bg-black">
+            <article key={p.id} className="group relative rounded-sm overflow-hidden shadow-2xl h-[550px] border border-white/5 bg-black">
               <img src={p.imageUrl} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-90" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-16 text-white">
                 <div className="flex items-center gap-4 mb-8">
@@ -71,13 +72,13 @@ const Projects: React.FC = () => {
 
         <div className="mb-48">
           <div className="flex items-center gap-8 mb-20">
-            <div className="h-[1px] grow bg-slate-200"></div>
-            <h2 className="text-[11px] font-black uppercase tracking-[0.6em] text-slate-400 shrink-0">Hardware Fidelity</h2>
-            <div className="h-[1px] grow bg-slate-200"></div>
+            <div className="h-[1px] grow bg-white/5"></div>
+            <h2 className="text-[11px] font-black uppercase tracking-[0.6em] text-slate-500 shrink-0">Hardware Fidelity</h2>
+            <div className="h-[1px] grow bg-white/5"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {galleryImages.map((img, i) => (
-              <div key={i} className="group relative aspect-square rounded-sm overflow-hidden shadow-xl hover:shadow-3xl transition-all cursor-crosshair border border-slate-100 bg-black">
+              <div key={i} className="group relative aspect-square rounded-sm overflow-hidden shadow-xl hover:shadow-3xl transition-all cursor-crosshair border border-white/5 bg-black">
                 <img src={img.url} alt={img.title} className="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-700" />
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-8 text-center">
                   <p className="text-white font-black text-xs uppercase mb-3 tracking-tighter italic">{img.title}</p>

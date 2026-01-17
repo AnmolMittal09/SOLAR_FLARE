@@ -70,23 +70,23 @@ const QuickForm = () => {
     window.open(`https://wa.me/919211592425?text=${encodeURIComponent(message)}`, '_blank');
   };
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-[#050505] border-y border-white/5">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-6xl mx-auto bg-slate-50 rounded-[3rem] p-8 md:p-12 shadow-2xl border border-slate-100">
+        <div className="max-w-6xl mx-auto bg-[#0a0a0a] rounded-[3rem] p-8 md:p-12 shadow-2xl border border-white/5">
           <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row items-center gap-8">
             <div className="lg:w-1/4">
-              <h2 className="text-3xl font-black tracking-tighter uppercase italic text-slate-900 leading-none">Book Your <br />Technical Audit</h2>
+              <h2 className="text-3xl font-black tracking-tighter uppercase italic text-white leading-none">Book Your <br />Technical Audit</h2>
             </div>
             <div className="flex-1 grid md:grid-cols-3 gap-6 w-full">
-              <input required type="text" placeholder="Full Name" className="w-full bg-white border-b-2 border-slate-200 px-4 py-4 font-black outline-none focus:border-[#FF8A00] uppercase tracking-tighter" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
-              <input required type="tel" placeholder="Phone Number" className="w-full bg-white border-b-2 border-slate-200 px-4 py-4 font-black outline-none focus:border-[#FF8A00] uppercase tracking-tighter" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
-              <select className="w-full bg-white border-b-2 border-slate-200 px-4 py-4 font-black outline-none focus:border-[#FF8A00] uppercase tracking-tighter" value={formData.segment} onChange={e => setFormData({...formData, segment: e.target.value})}>
+              <input required type="text" placeholder="Full Name" className="w-full bg-[#111] border-b-2 border-white/10 px-4 py-4 font-black outline-none focus:border-[#FF8A00] uppercase tracking-tighter text-white" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+              <input required type="tel" placeholder="Phone Number" className="w-full bg-[#111] border-b-2 border-white/10 px-4 py-4 font-black outline-none focus:border-[#FF8A00] uppercase tracking-tighter text-white" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
+              <select className="w-full bg-[#111] border-b-2 border-white/10 px-4 py-4 font-black outline-none focus:border-[#FF8A00] uppercase tracking-tighter text-white" value={formData.segment} onChange={e => setFormData({...formData, segment: e.target.value})}>
                 <option value="Residential">Residential</option>
                 <option value="Commercial">Commercial</option>
                 <option value="Industrial">Industrial</option>
               </select>
             </div>
-            <button type="submit" className="lg:w-auto w-full px-12 py-5 bg-black text-white font-black uppercase tracking-widest rounded-xl hover:bg-[#FF8A00] transition-all active:scale-95 shadow-lg">
+            <button type="submit" className="lg:w-auto w-full px-12 py-5 bg-white text-black font-black uppercase tracking-widest rounded-xl hover:bg-[#FF8A00] hover:text-white transition-all active:scale-95 shadow-lg">
               Submit Request
             </button>
           </form>
@@ -196,7 +196,7 @@ const WhyChooseUs = () => {
 
 const Home: React.FC = () => {
   return (
-    <div className="animate-in fade-in duration-700">
+    <div className="animate-in fade-in duration-700 bg-[#050505]">
       <SEO title="Premium Solar Infrastructure" description="Engineering high-yield solar ecosystems for residential and industrial sectors. SOLAR FLARE certified partners." />
       <Hero />
       <QuickForm />
@@ -211,13 +211,13 @@ const Home: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {SOLUTIONS.map(sol => (
-              <div key={sol.id} className="p-10 bg-white/5 border border-white/10 rounded-[3rem] hover:bg-white hover:text-black transition-all duration-700">
+              <div key={sol.id} className="p-10 bg-[#0a0a0a] border border-white/5 rounded-[3rem] hover:bg-white hover:text-black transition-all duration-700 group">
                 <div className="text-6xl mb-8">{sol.icon}</div>
                 <h3 className="text-2xl font-black uppercase italic mb-4">{sol.title}</h3>
                 <p className="text-slate-400 font-medium italic mb-8 group-hover:text-slate-600">{sol.desc}</p>
                 <div className="space-y-3">
                   {sol.benefits.map((b, idx) => (
-                    <div key={idx} className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest">
+                    <div key={idx} className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-500 group-hover:text-slate-900">
                       <span className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full"></span> {b}
                     </div>
                   ))}
@@ -229,18 +229,18 @@ const Home: React.FC = () => {
       </section>
 
       {/* Expertise Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-[#050505]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <span className="text-[#FF8A00] font-black uppercase tracking-[0.5em] text-[10px] mb-4 block">Sector Expertise</span>
-            <h2 className="text-4xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase italic">Premium Segments.</h2>
+            <h2 className="text-4xl md:text-7xl font-black tracking-tighter text-white uppercase italic">Premium Segments.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {SERVICES.map(s => (
-              <div key={s.id} className="bg-white rounded-[2.5rem] overflow-hidden shadow-xl group border border-slate-100">
+              <div key={s.id} className="bg-[#0a0a0a] rounded-[2.5rem] overflow-hidden shadow-xl group border border-white/5">
                 <div className="h-64 relative overflow-hidden">
                   <img src={s.imageUrl} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000" alt={s.title} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                   <h3 className="absolute bottom-6 left-6 text-3xl font-black text-white uppercase italic">{s.title}</h3>
                 </div>
                 <div className="p-8">

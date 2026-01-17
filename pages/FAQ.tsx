@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { FAQS, EMAIL_ADDRESS, WHATSAPP_LINK } from '../constants';
 import { SEO } from '../components/SEO';
@@ -6,7 +7,7 @@ const FAQ: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <div className="pt-48 pb-32">
+    <div className="pt-48 pb-32 bg-[#050505] min-h-screen">
       <SEO 
         title="Knowledge Hub" 
         description="Industrial solar queries. Information on warranties, net-metering, and ROI."
@@ -14,22 +15,22 @@ const FAQ: React.FC = () => {
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-24">
            <span className="text-[#BE1E2D] font-black uppercase tracking-[0.5em] text-[10px] mb-8 block">Project Support</span>
-           <h1 className="text-6xl md:text-[8rem] font-[900] mb-8 italic uppercase italic tracking-tighter leading-none">COMMON <br /><span className="text-gradient">QUERIES.</span></h1>
+           <h1 className="text-6xl md:text-[8rem] font-[900] mb-8 italic uppercase italic tracking-tighter leading-none text-white">COMMON <br /><span className="text-gradient">QUERIES.</span></h1>
            <p className="text-2xl text-slate-500 font-medium italic">Everything you need to verify before your energy transition.</p>
         </div>
 
         <div className="space-y-6" role="list">
           {FAQS.map((faq, i) => (
-            <div key={i} className="bg-white rounded-sm border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500" role="listitem">
+            <div key={i} className="bg-[#0a0a0a] rounded-sm border border-white/5 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500" role="listitem">
               <button
                 id={`faq-button-${i}`}
                 aria-expanded={activeIndex === i}
                 aria-controls={`faq-panel-${i}`}
                 onClick={() => setActiveIndex(activeIndex === i ? null : i)}
-                className="w-full text-left p-10 flex items-center justify-between hover:bg-slate-50 transition-colors focus:outline-none"
+                className="w-full text-left p-10 flex items-center justify-between hover:bg-[#111] transition-colors focus:outline-none"
               >
-                <span className="text-xl lg:text-2xl font-black text-slate-900 tracking-tighter uppercase italic">{faq.question}</span>
-                <span className={`text-4xl transition-all duration-500 font-black ${activeIndex === i ? 'rotate-180 text-[#BE1E2D]' : 'text-slate-300'}`} aria-hidden="true">
+                <span className="text-xl lg:text-2xl font-black text-white tracking-tighter uppercase italic">{faq.question}</span>
+                <span className={`text-4xl transition-all duration-500 font-black ${activeIndex === i ? 'rotate-180 text-[#BE1E2D]' : 'text-slate-600'}`} aria-hidden="true">
                   {activeIndex === i ? '−' : '+'}
                 </span>
               </button>
@@ -38,7 +39,7 @@ const FAQ: React.FC = () => {
                 role="region"
                 aria-labelledby={`faq-button-${i}`}
                 hidden={activeIndex !== i}
-                className={`p-10 pt-0 text-slate-500 text-lg leading-relaxed font-medium italic border-t border-slate-50 transition-all ${activeIndex === i ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
+                className={`p-10 pt-0 text-slate-400 text-lg leading-relaxed font-medium italic border-t border-white/5 transition-all ${activeIndex === i ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
               >
                 {faq.answer}
               </div>
