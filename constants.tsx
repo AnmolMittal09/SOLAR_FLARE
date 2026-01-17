@@ -29,11 +29,13 @@ export const LEADERSHIP = [
   { 
     name: "Dhiraj Sanduja", 
     role: "Director", 
+    imageUrl: "https://raw.githubusercontent.com/AnmolMittal09/SOLAR_FLARE/b17408e96d69dc005df0de3bee0c3ffc4dac52c8/Dheeraj.png",
     bio: "Brings extensive technical expertise and strategic vision, guiding the group toward sustainable growth and a greener future." 
   },
   { 
     name: "Jatin Batheja", 
     role: "Project Manager", 
+    imageUrl: "https://raw.githubusercontent.com/AnmolMittal09/SOLAR_FLARE/b17408e96d69dc005df0de3bee0c3ffc4dac52c8/Jatin.png",
     bio: "Specializes in project management and operational excellence, ensuring every solar deployment meets the highest standards of reliability." 
   }
 ];

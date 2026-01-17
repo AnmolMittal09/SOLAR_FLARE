@@ -77,15 +77,25 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
-            {LEADERSHIP.map((member, i) => (
+            {LEADERSHIP.map((member: any, i) => (
               <div key={i} className="bg-[#0a0a0a] p-8 sm:p-12 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/5 shadow-2xl hover:shadow-red-900/5 transition-all group">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-8 mb-8 md:mb-10">
-                   <div className="w-16 h-16 md:w-24 md:h-24 bg-white rounded-2xl flex items-center justify-center text-black text-2xl md:text-4xl shadow-xl group-hover:rotate-6 transition-transform shrink-0">
-                      {member.name.charAt(0)}
+                   <div className="w-20 h-20 md:w-32 md:h-32 bg-[#111] rounded-2xl overflow-hidden shadow-xl group-hover:rotate-3 transition-transform shrink-0 border border-white/10">
+                      {member.imageUrl ? (
+                        <img 
+                          src={member.imageUrl} 
+                          alt={member.name} 
+                          className="w-full h-full object-cover filter brightness-110 group-hover:scale-110 transition-transform duration-700" 
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-white text-3xl md:text-5xl font-black bg-slate-900">
+                          {member.name.charAt(0)}
+                        </div>
+                      )}
                    </div>
                    <div>
-                      <h3 className="text-2xl md:text-3xl font-black text-white tracking-tighter uppercase leading-none">{member.name}</h3>
-                      <p className="text-[#BE1E2D] font-black uppercase tracking-widest text-[10px] md:text-xs mt-2 md:mt-3 italic">{member.role}</p>
+                      <h3 className="text-2xl md:text-4xl font-[1000] text-white tracking-tighter uppercase leading-none italic">{member.name}</h3>
+                      <p className="text-[#BE1E2D] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mt-2 md:mt-4 italic">{member.role}</p>
                    </div>
                 </div>
                 <p className="text-lg sm:text-xl md:text-2xl text-slate-400 font-medium leading-relaxed italic">{member.bio}</p>
