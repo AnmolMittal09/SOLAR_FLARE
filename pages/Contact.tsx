@@ -45,14 +45,16 @@ const Contact: React.FC = () => {
                 <a href={`tel:+91${PHONE_JATIN}`} className="group p-8 glass rounded-sm hover:bg-black transition-all duration-500 flex flex-col justify-between h-48 shadow-sm hover:shadow-2xl hover:border-[#F97316]/30">
                   <span className="text-3xl opacity-40 group-hover:opacity-100 transition-all origin-left grayscale group-hover:grayscale-0">📞</span>
                   <div>
-                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-600 mb-2">Project Lead</p>
+                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-600 mb-2">PROJECT MANAGER</p>
+                    <p className="text-[12px] font-black uppercase tracking-widest text-slate-600 mb-2">JATIN BATHEJA</p>
                     <p className="text-xl font-black text-white font-heading">{PHONE_JATIN}</p>
                   </div>
                 </a>
                 <a href={`tel:+91${PHONE_DHIRAJ}`} className="group p-8 glass rounded-sm hover:bg-black transition-all duration-500 flex flex-col justify-between h-48 shadow-sm hover:shadow-2xl hover:border-[#F97316]/30">
                   <span className="text-3xl opacity-40 group-hover:opacity-100 transition-all origin-left grayscale group-hover:grayscale-0">⚙️</span>
                   <div>
-                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-600 mb-2">Technical Ops</p>
+                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-600 mb-2">DIRECTOR</p>
+                    <p className="text-[12px] font-black uppercase tracking-widest text-slate-600 mb-2">DHIRAJ SANDUJA</p>
                     <p className="text-xl font-black text-white font-heading">{PHONE_DHIRAJ}</p>
                   </div>
                 </a>
