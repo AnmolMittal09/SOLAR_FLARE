@@ -222,11 +222,11 @@ const Footer: React.FC = () => (
           <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Reach Us</h3>
           <div className="space-y-4 md:space-y-6">
             <div className="flex flex-col gap-1 md:gap-2">
-              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-[#FF8A00]">Project Desk</span>
+              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-[#FF8A00]">Jatin Batheja</span>
               <a href={`tel:+91${PHONE_JATIN}`} className="text-lg md:text-xl font-black tracking-tighter text-white hover:text-[#FF8A00] transition-colors">{PHONE_JATIN}</a>
             </div>
             <div className="flex flex-col gap-1 md:gap-2">
-              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-[#BE1E2D]">Technical Leads</span>
+              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-[#BE1E2D]">Dhiraj Sanduja</span>
               <a href={`tel:+91${PHONE_DHIRAJ}`} className="text-lg md:text-xl font-black tracking-tighter text-white hover:text-[#FF8A00] transition-colors">{PHONE_DHIRAJ}</a>
             </div>
             <div className="pt-2 border-t border-white/10 mt-2">
