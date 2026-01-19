@@ -189,17 +189,20 @@ const Home: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {SOLUTIONS.map(sol => (
-              <div key={sol.id} className="p-10 md:p-14 glass border border-white/5 rounded-sm hover:bg-white hover:text-black transition-all duration-700 group">
+              <div key={sol.id} className="p-10 md:p-14 glass border border-white/5 rounded-sm hover:bg-white hover:text-black transition-all duration-700 group flex flex-col relative h-full">
                 <div className="text-6xl md:text-7xl mb-10 group-hover:scale-110 transition-transform origin-left grayscale group-hover:grayscale-0">{sol.icon}</div>
                 <h3 className="text-2xl md:text-3xl font-black uppercase italic mb-6 font-heading">{sol.title}</h3>
                 <p className="text-base text-slate-500 font-medium italic mb-10 group-hover:text-slate-700">{sol.desc}</p>
-                <div className="space-y-4">
+                <div className="space-y-4 mb-16 grow">
                   {sol.benefits.map((b, idx) => (
                     <div key={idx} className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-600 group-hover:text-black">
                       <span className="w-1.5 h-1.5 bg-[#F97316] rounded-full"></span> {b}
                     </div>
                   ))}
                 </div>
+                <Link to={`/solutions#${sol.id}`} className="absolute bottom-10 right-10 text-[10px] font-black uppercase tracking-[0.3em] text-[#DC2626] group-hover:text-[#F97316] transition-colors flex items-center gap-2">
+                  VIEW DETAILS <span>→</span>
+                </Link>
               </div>
             ))}
           </div>

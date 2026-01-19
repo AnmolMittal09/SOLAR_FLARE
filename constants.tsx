@@ -112,6 +112,14 @@ export const SOLUTIONS = [
     title: "On-Grid Systems",
     desc: "Export excess power to the utility grid and earn credits through Net-metering. The most cost-efficient solar model.",
     icon: "🔌",
+    imageUrl: "https://raw.githubusercontent.com/AnmolMittal09/Solar_flare_images/main/3.png",
+    detailedDesc: "On-grid solar systems are designed to work in synchronization with the utility grid. These systems use solar panels to generate electricity during the day, which is then used by the consumer. Any excess energy is fed back into the grid via a net-metering process.",
+    howItWorks: [
+      { step: 1, title: "Solar Generation", text: "Solar panels capture sunlight and convert it into DC electricity." },
+      { step: 2, title: "DC to AC Conversion", text: "A grid-tie inverter converts the DC into AC for your property." },
+      { step: 3, title: "Consumption & Export", text: "Power is consumed locally; surplus flows to the utility grid." },
+      { step: 4, title: "Net Metering", text: "The utility meter tracks credits for the electricity you export." }
+    ],
     benefits: ["Zero Battery Costs", "Maximize ROI", "Government Subsidies", "Less Maintenance"]
   },
   {
@@ -119,6 +127,14 @@ export const SOLUTIONS = [
     title: "Off-Grid Systems",
     desc: "Total independence. Store solar power in high-capacity batteries to power your property anywhere, anytime.",
     icon: "🔋",
+    imageUrl: "https://raw.githubusercontent.com/AnmolMittal09/Solar_flare_images/main/solar-off-grid-system2.jpg",
+    detailedDesc: "Off-grid systems are completely autonomous and independent of the utility grid. These are ideal for remote locations or areas with frequent power outages, utilizing heavy-duty battery storage to provide electricity 24/7.",
+    howItWorks: [
+      { step: 1, title: "Energy Capture", text: "Panels generate DC power from sunlight during daylight hours." },
+      { step: 2, title: "Storage Control", text: "A charge controller regulates the flow of electricity to batteries." },
+      { step: 3, title: "Battery Bank", text: "Energy is stored in high-performance deep-cycle batteries." },
+      { step: 4, title: "Inversion", text: "The inverter draws from the battery bank to power your loads." }
+    ],
     benefits: ["100% Autonomy", "Reliable Backup", "Remote Operations", "Long Lasting"]
   },
   {
@@ -126,6 +142,14 @@ export const SOLUTIONS = [
     title: "Hybrid Systems",
     desc: "Stay connected to the grid while maintaining a battery bank for critical backup during utility outages.",
     icon: "⚡",
+    imageUrl: "https://raw.githubusercontent.com/AnmolMittal09/Solar_flare_images/main/4.png",
+    detailedDesc: "Hybrid systems combine the best of both worlds. They are connected to the grid like on-grid systems but also include a battery bank for backup. This ensures you can export power while also having security during blackouts.",
+    howItWorks: [
+      { step: 1, title: "Smart Generation", text: "Hybrid panels generate power used for immediate local loads." },
+      { step: 2, title: "Priority Charging", text: "The system ensures batteries are fully charged for outages." },
+      { step: 3, title: "Surplus Management", text: "Extra energy is sent to the grid for net-metering credits." },
+      { step: 4, title: "Fail-over Support", text: "In case of a grid failure, the system switches to battery mode." }
+    ],
     benefits: ["Priority Backup", "Peak Saving", "Ultimate Reliability", "Smart Management"]
   }
 ];
@@ -133,12 +157,13 @@ export const SOLUTIONS = [
 // ==========================================
 // 8. PARTNER BRANDS & HARDWARE
 // ==========================================
+// Added 'role' property to each brand to satisfy the TypeScript access in Brands.tsx
 export const BRANDS = [
-  { name: "Livguard", desc: "Leading energy storage and solar solutions." },
-  { name: "UTL Solar", desc: "Innovative solar PCUs and high-efficiency panels." },
-  { name: "Luminous", desc: "Decades of trust in home electrical and solar solutions." },
-  { name: "Adani Solar", desc: "India's largest solar cell and module manufacturer." },  
-  { name: "Tata Power", desc: "Unmatched reliability in India's power sector." }
+  { name: "Livguard", role: "Strategic Partner", desc: "Leading energy storage and solar solutions." },
+  { name: "UTL Solar", role: "Technical Partner", desc: "Innovative solar PCUs and high-efficiency panels." },
+  { name: "Luminous", role: "Hardware Partner", desc: "Decades of trust in home electrical and solar solutions." },
+  { name: "Adani Solar", role: "Module Partner", desc: "India's largest solar cell and module manufacturer." },  
+  { name: "Tata Power", role: "Legacy Partner", desc: "Unmatched reliability in India's power sector." }
 ];
 
 // ==========================================

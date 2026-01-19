@@ -13,6 +13,7 @@ import Projects from './pages/Projects.tsx';
 import FAQ from './pages/FAQ.tsx';
 import Contact from './pages/Contact.tsx';
 import Brands from './pages/Brands.tsx';
+import Solutions from './pages/Solutions.tsx';
 
 // ==========================================
 // 1. GLOBAL ROUTING CONFIGURATION
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/expertise" element={<Expertise />} />
+          <Route path="/solutions" element={<Solutions />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/projects" element={<Projects />} />
