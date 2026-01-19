@@ -7,15 +7,17 @@ import { SEO } from '../components/SEO';
 
 const Expertise: React.FC = () => {
   return (
-    <div className="animate-in fade-in duration-1000 bg-[#050505] pt-32 md:pt-48">
+    <div className="animate-in fade-in duration-1000 bg-[#050505] pt-[65px]">
       <SEO title="Technical Expertise" description="Comprehensive solar solutions and sector expertise. High-performance engineering for residential and industrial assets." />
 
-      <section id="solutions" className="py-24 md:py-40 bg-[#050505]">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-24 md:mb-40">
-            <span className="text-[#F97316] font-black uppercase tracking-[0.7em] text-[10px] mb-8 block">Energy Modalities</span>
-            <h2 className="text-4xl md:text-8xl font-black tracking-tighter uppercase italic text-white font-heading">SYSTEM <span className="text-[#F97316]">PROTOCOLS.</span></h2>
+      <section id="solutions" className="pt-10 pb-24 md:pb-32 bg-[#050505]">
+        <div className="text-center container mx-auto px-4 md:px-6">
+          <div className="mb-12 md:mb-20">
+            <h2 className="text-4xl md:text-8xl font-black tracking-tighter uppercase italic text-white font-heading">
+              SYSTEM <span className="text-[#F97316]">PROTOCOLS.</span>
+            </h2>
           </div>
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {SOLUTIONS.map((sol) => (
