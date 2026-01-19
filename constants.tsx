@@ -134,11 +134,11 @@ export const SOLUTIONS = [
 // 8. PARTNER BRANDS & HARDWARE
 // ==========================================
 export const BRANDS = [
-  { name: "Livguard", role: "Strategic Partner", desc: "Leading energy storage and solar solutions." },
-  { name: "Adani Solar", role: "Module Partner", desc: "India's largest solar cell and module manufacturer." },
-  { name: "Luminous", role: "Energy Partner", desc: "Decades of trust in home electrical and solar solutions." },
-  { name: "UTL Solar", role: "Technology Partner", desc: "Innovative solar PCUs and high-efficiency panels." },
-  { name: "Tata Power", role: "Legacy Partner", desc: "Unmatched reliability in India's power sector." }
+  { name: "Livguard", desc: "Leading energy storage and solar solutions." },
+  { name: "UTL Solar", desc: "Innovative solar PCUs and high-efficiency panels." },
+  { name: "Luminous", desc: "Decades of trust in home electrical and solar solutions." },
+  { name: "Adani Solar", desc: "India's largest solar cell and module manufacturer." },  
+  { name: "Tata Power", desc: "Unmatched reliability in India's power sector." }
 ];
 
 // ==========================================

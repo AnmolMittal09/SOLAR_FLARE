@@ -45,7 +45,7 @@ const Brands: React.FC = () => {
               <h2 className="text-5xl font-black uppercase tracking-tighter leading-none italic text-white">The Flare <span className="text-[#BE1E2D]">Standard.</span></h2>
               <div className="space-y-8">
                  {[
-                   { title: "25-Year Performance", desc: "Linear performance warranties guaranteed by our Tier-1 module partners." },
+                   { title: "27-Year Performance", desc: "Linear performance warranties guaranteed by our Tier-1 module partners." },
                    { title: "Smart Grid Sync", desc: "High-density inverters ensuring maximum conversion efficiency even in low light." },
                    { title: "Industrial Mounting", desc: "Galvanized structural steel components built to withstand extreme wind loads." }
                  ].map((item, i) => (
@@ -64,8 +64,8 @@ const Brands: React.FC = () => {
            <div className="relative">
               <div className="absolute -inset-10 bg-[#BE1E2D]/5 blur-3xl rounded-full"></div>
               <div className="relative bg-[#0a0a0a] p-20 rounded-[4rem] border border-white/5 shadow-3xl text-white">
-                 <p className="text-[10px] font-black uppercase tracking-[0.5em] text-[#BE1E2D] mb-8">Supply Chain Trust</p>
-                 <h3 className="text-4xl font-black tracking-tighter uppercase italic mb-8">Direct OEM <br />Channeling.</h3>
+                 <p className="text-[20px] font-black uppercase tracking-[0.5em] text-[#BE1E2D] mb-8">Supply Chain Trust</p>
+                 <h3 className="text-4xl font-black tracking-normal uppercase italic mb-8">Direct OEM <br />Channeling.</h3>
                  <p className="text-white/40 text-lg font-medium italic leading-relaxed">
                    By sourcing directly from brand OEMs like {PARTNER_BRAND} and Waree, we eliminate middle-layer costs and ensure 100% authentic hardware with validated serial tracking.
                  </p>
