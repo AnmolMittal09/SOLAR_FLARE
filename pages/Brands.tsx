@@ -5,7 +5,7 @@ import { SEO } from '../components/SEO';
 
 const Brands: React.FC = () => {
   return (
-    <div className="pt-74 bg-[#050505] min-h-screen">
+    <div className="pt-48 pb-32 bg-[#050505] min-h-screen">
       <SEO 
         title="Hardware Partners & Tier-1 Brands" 
         description={`Solar Flare partners with global leaders like ${PARTNER_BRAND}, Waree, and Jakson to ensure high-performance solar components.`}

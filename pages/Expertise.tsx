@@ -42,8 +42,7 @@ const Expertise: React.FC = () => {
       <section id="services" className="py-24 md:py-40 bg-black border-y border-white/5">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-24 md:mb-40">
-            <span className="text-[#DC2626] font-black uppercase tracking-[0.7em] text-[20px] mb-8 block">Sector Domains</span>
-            <h2 className="text-4xl md:text-8xl font-black tracking-tighter uppercase italic text-white font-heading">CORE <span className="text-[#F97316]">ASSETS.</span></h2>
+            <h2 className="text-4xl md:text-8xl font-black tracking-tighter uppercase italic text-white font-heading">SECTOR <span className="text-[#F97316]">DOMAINS.</span></h2>
           </div>
 
           <div className="space-y-32 md:space-y-48">
