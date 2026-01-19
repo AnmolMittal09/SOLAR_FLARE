@@ -65,7 +65,7 @@ const Brands: React.FC = () => {
               <div className="absolute -inset-10 bg-[#BE1E2D]/5 blur-3xl rounded-full"></div>
               <div className="relative bg-[#0a0a0a] p-20 rounded-[4rem] border border-white/5 shadow-3xl text-white">
                  <p className="text-[20px] font-black uppercase tracking-[0.5em] text-[#BE1E2D] mb-8">Supply Chain Trust</p>
-                 <h3 className="text-4xl font-black tracking-normal uppercase italic mb-8">Direct OEM <br />Channeling.</h3>
+                 <h3 className="text-4xl font-black tracking-normal uppercase italic mb-8">Direct  OEM <br />Channeling.</h3>
                  <p className="text-white/40 text-lg font-medium italic leading-relaxed">
                    By sourcing directly from brand OEMs like {PARTNER_BRAND} and Waree, we eliminate middle-layer costs and ensure 100% authentic hardware with validated serial tracking.
                  </p>
