@@ -159,11 +159,11 @@ export const SOLUTIONS = [
 // ==========================================
 // Added 'role' property to each brand to satisfy the TypeScript access in Brands.tsx
 export const BRANDS = [
-  { name: "Livguard", role: "Strategic Partner", desc: "Leading energy storage and solar solutions." },
-  { name: "UTL Solar", role: "Technical Partner", desc: "Innovative solar PCUs and high-efficiency panels." },
-  { name: "Luminous", role: "Hardware Partner", desc: "Decades of trust in home electrical and solar solutions." },
-  { name: "Adani Solar", role: "Module Partner", desc: "India's largest solar cell and module manufacturer." },  
-  { name: "Tata Power", role: "Legacy Partner", desc: "Unmatched reliability in India's power sector." }
+  { name: "Livguard", desc: "Leading energy storage and solar solutions." },
+  { name: "UTL Solar", desc: "Innovative solar PCUs and high-efficiency panels." },
+  { name: "Luminous", desc: "Decades of trust in home electrical and solar solutions." },
+  { name: "Adani Solar", desc: "India's largest solar cell and module manufacturer." },  
+  { name: "Tata Power", desc: "Unmatched reliability in India's power sector." }
 ];
 
 // ==========================================
