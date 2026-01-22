@@ -1,9 +1,8 @@
 
 import React, { useState } from 'react';
-import * as ReactRouterDOM from 'react-router-dom';
-const { Link } = ReactRouterDOM;
+import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants.tsx';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO.tsx';
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('All');
@@ -41,7 +40,7 @@ const Projects: React.FC = () => {
           <div className="flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-3 glass px-6 py-2 rounded-sm border border-white/5 mb-10">
                <span className="w-2 h-2 rounded-full bg-[#F97316] animate-pulse"></span>
-               <span className="text-white text-[20px] font-black uppercase tracking-[0.5em]">Global Footprint</span>
+               <span className="text-white text-[10px] font-black uppercase tracking-[0.5em]">Global Footprint</span>
             </div>
             
             <h1 className="text-6xl md:text-8xl lg:text-[9.5rem] font-black tracking-tighter uppercase italic leading-[0.8] text-white font-heading mb-12">
@@ -131,7 +130,7 @@ const Projects: React.FC = () => {
 
         <div className="p-20 bg-black text-white rounded-sm border border-white/10 shadow-3xl text-center relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-64 h-64 bg-orange-600/5 blur-[120px] rounded-full pointer-events-none"></div>
-          <h2 className="text-5xl font-black mb-6 tracking-[0.1em] italic uppercase italic leading-none font-heading">Verify Infrastructure <br />Quality.</h2>
+          <h2 className="text-5xl font-black mb-6 tracking-tighter italic uppercase italic leading-none font-heading">Verify Infrastructure <br />Quality.</h2>
           <p className="text-xl text-slate-500 font-medium mb-12 max-w-2xl mx-auto leading-relaxed italic">Site visits to operational industrial plants in Gurugram and Manesar can be arranged for enterprise clients.</p>
           <Link 
             to="/contact" 

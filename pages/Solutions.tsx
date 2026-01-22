@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { SOLUTIONS, ICONS } from '../constants';
-import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { SOLUTIONS, ICONS } from '../constants.tsx';
+import { SEO } from '../components/SEO.tsx';
 
 const Solutions: React.FC = () => {
   return (
@@ -78,11 +79,8 @@ const Solutions: React.FC = () => {
 
         <div className="mt-48 p-12 md:p-32 glass text-white rounded-sm text-center border border-white/5 relative overflow-hidden group shadow-3xl">
           <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <h2 className="text-4xl md:text-7xl font-black mb-10 tracking-tighter uppercase italic leading-none font-heading">Need a <br /><span className="text-[#F97316]">Technical</span> Feasibility?</h2>
+          <h2 className="text-4xl md:text-7xl font-black mb-10 tracking-[0.1em] uppercase italic leading-none font-heading">Need a <br /><span className="text-[#F97316]">Technical</span> Feasibility?</h2>
           <p className="text-xl md:text-2xl text-slate-500 mb-16 max-w-2xl mx-auto italic font-medium">Our senior engineers conduct shadow analysis and structural audits to recommend the optimal modality.</p>
-          <a href="#/contact" className="inline-block bg-[#DC2626] hover:bg-white hover:text-black text-white px-16 py-8 rounded-sm font-black text-xl transition-all shadow-3xl uppercase tracking-widest btn-glow">
-            Book Site Audit
-          </a>
         </div>
       </div>
     </div>

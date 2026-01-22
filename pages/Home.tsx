@@ -1,9 +1,8 @@
 
 import React, { useState } from 'react';
-import * as ReactRouterDOM from 'react-router-dom';
-const { Link } = ReactRouterDOM;
+import { Link } from 'react-router-dom';
 import { SERVICES, SOLUTIONS, WHATSAPP_LINK, TAGLINE } from '../constants.tsx';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO.tsx';
 
 // ==========================================
 // 1. HERO SECTION (FOLD 1)
@@ -38,7 +37,6 @@ const Hero = () => {
               ">
                 INDUSTRIAL ASSETS.
               </span>
-
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-slate-400 max-w-2xl font-medium leading-relaxed italic border-l-4 border-[#F97316] pl-6 py-2">
@@ -83,7 +81,7 @@ const QuickForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Home Inquiry:\nName: ${formData.name}\nPhone: ${formData.phone}\nSegment: ${formData.segment}`;
-    window.open(`https://wa.me/919211592425?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`${WHATSAPP_LINK}?text=${encodeURIComponent(message)}`, '_blank');
   };
   return (
     <section className="py-12 md:py-16 bg-[#050505] border-y border-white/5">

@@ -1,9 +1,8 @@
 
 import React from 'react';
-import * as ReactRouterDOM from 'react-router-dom';
-const { Link } = ReactRouterDOM;
-import { SERVICES, SOLUTIONS, ICONS } from '../constants';
-import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { SERVICES, SOLUTIONS, ICONS } from '../constants.tsx';
+import { SEO } from '../components/SEO.tsx';
 
 const Expertise: React.FC = () => {
   return (
@@ -17,7 +16,6 @@ const Expertise: React.FC = () => {
               SYSTEM <span className="text-[#F97316]">PROTOCOLS.</span>
             </h2>
           </div>
-
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {SOLUTIONS.map((sol) => (

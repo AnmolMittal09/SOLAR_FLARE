@@ -1,8 +1,6 @@
 
 import React from 'react';
-import * as ReactRouterDOM from 'react-router-dom';
-const { HashRouter, Routes, Route } = ReactRouterDOM;
-const Router = HashRouter;
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import { Layout } from './components/Layout.tsx';
 import Home from './pages/Home.tsx';
@@ -20,7 +18,7 @@ import Solutions from './pages/Solutions.tsx';
 // ==========================================
 const App: React.FC = () => {
   return (
-    <Router>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,7 +33,7 @@ const App: React.FC = () => {
           <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
-    </Router>
+    </HashRouter>
   );
 };
 
