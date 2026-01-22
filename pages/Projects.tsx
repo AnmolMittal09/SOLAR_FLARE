@@ -131,7 +131,7 @@ const Projects: React.FC = () => {
 
         <div className="p-20 bg-black text-white rounded-sm border border-white/10 shadow-3xl text-center relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-64 h-64 bg-orange-600/5 blur-[120px] rounded-full pointer-events-none"></div>
-          <h2 className="text-5xl font-black mb-6 tracking-tighter italic uppercase italic leading-none font-heading">Verify Infrastructure <br />Quality.</h2>
+          <h2 className="text-5xl font-black mb-6 tracking-[0.1em] italic uppercase italic leading-none font-heading">Verify Infrastructure <br />Quality.</h2>
           <p className="text-xl text-slate-500 font-medium mb-12 max-w-2xl mx-auto leading-relaxed italic">Site visits to operational industrial plants in Gurugram and Manesar can be arranged for enterprise clients.</p>
           <Link 
             to="/contact" 
